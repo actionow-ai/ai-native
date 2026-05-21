@@ -54,4 +54,15 @@ Sixth pass at `2026-05-22 03:00 +0800` after merging `origin/agent/blue-sky/reve
 - `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records, all approved.
 - `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`; the probe server was stopped afterwards.
 
+Seventh pass at `2026-05-22 03:09 +0800`:
+
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `npm start -- --host 127.0.0.1 --port 8173`: served `http://127.0.0.1:8173/`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records, all approved.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
