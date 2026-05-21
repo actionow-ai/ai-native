@@ -1,28 +1,31 @@
 {
-  "purpose": "Bridge the seed queue, image preflight, and Wikidata P5304 locality candidates without promoting weak evidence to approved seed data.",
+  "purpose": "Bridge the seed queue, image preflight, Wikidata P5304 locality candidates, and starter partial without promoting weak evidence to final seed data.",
   "promotionRule": "A row can move to data/species-seed.json with curationStatus=approved only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present.",
   "sourceBranches": {
     "baseQueueAndSchema": "origin/agent/product-visionary/butterfly-queue-review",
     "imagePreflight": "origin/agent/unknown/butterfly-seed-preflight",
+    "starterPartial": "origin/agent/unknown/butterfly-seed-starters",
     "wikidataTypeLocalityCandidates": "origin/agent/unknown/wikidata-type-locality-candidates"
   },
   "summary": {
     "queueSpeciesWithTaxonAndImagePreflight": 12,
-    "queueSpeciesWithTypeLocalityEvidence": 0,
+    "queueSpeciesWithTypeLocalityEvidence": 2,
     "wikidataRowsWithTypeLocalityCandidate": 12,
     "wikidataRowsWithTaxonAndImagePreflight": 0,
-    "approvedSeedRows": 0
+    "approvedStarterRows": 2,
+    "approvedSeedRows": 0,
+    "finalSeedRows": 0
   },
   "rows": [
     {
       "scientificName": "Danaus plexippus",
       "sourceSet": "priority_seed_queue",
       "queuePriority": 1,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_or_original_description",
-      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+      "gbifEvidence": "starter_verified",
+      "imageEvidence": "starter_verified",
+      "localityEvidence": "starter_verified_broad_original_description",
+      "readiness": "row_level_approved_starter_not_final_dataset",
+      "nextAction": "Keep as a low-precision starter partial row; final data/species-seed.json still needs at least eight more approved rows."
     },
     {
       "scientificName": "Papilio machaon",
@@ -78,11 +81,11 @@
       "scientificName": "Heliconius erato",
       "sourceSet": "priority_seed_queue",
       "queuePriority": 2,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_or_original_description",
-      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+      "gbifEvidence": "starter_verified",
+      "imageEvidence": "starter_verified",
+      "localityEvidence": "starter_verified_type_locality",
+      "readiness": "row_level_approved_starter_not_final_dataset",
+      "nextAction": "Keep as a country-level starter partial row; final data/species-seed.json still needs at least eight more approved rows."
     },
     {
       "scientificName": "Battus philenor",

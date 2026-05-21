@@ -28,4 +28,6 @@
 
 `data/species-source-review.queue.json` 是核查工作队列，不是公开 seed 数据。每个候选先补齐 `evidence.typeLocality` 和 `evidence.imageLicense`，再移动到 `data/species-seed.json`。
 
+`data/species-seed.partial.json` 只存放已经通过人工来源核查的 starter 记录，用来给后续 10-20 条正式 seed 数据提供字段和证据样例。它不是第一里程碑的完整交付；正式公开数据仍应落在 `data/species-seed.json`，并满足 schema 的最小数量要求。
+
 当前已知风险：快速查询显示 Wikidata 可以辅助名称、图片和外部 ID，但不能稳定给出蝴蝶物种的结构化 type locality。因此不要把“接口查不到地点”理解为无地点，也不要把接口能查到图片理解为授权已经可用。
