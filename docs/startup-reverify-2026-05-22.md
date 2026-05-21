@@ -132,4 +132,16 @@ Thirteenth pass at `2026-05-22 06:26 +0800` against `agent/decisive-closer/start
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
 
+Fourteenth pass at `2026-05-22 06:33 +0800` against `agent/decisive-closer/startup-consolidation@0dc70dc`:
+
+- `git fetch --prune`: completed and discovered new `origin/agent/blue-sky/discovery-*` branches.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/blue-sky/discovery-lens-startup-0dc70dc refs/heads/agent/blue-sky/discovery-time-lens refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe`: confirmed canonical startup-consolidation is `0dc70dcaf038c719c925e996be93dd2fc1a26e32`; the newer blue-sky discovery lens branches are doc-only timeline/lens notes and should not replace the startup baseline.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `git diff --check`: passed before this doc-only append.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
