@@ -75,6 +75,7 @@
 - 公开原型只展示 `curationStatus = "approved"` 且 `confidence != "low"` 的记录。
 - 3D 地球可旋转、缩放、点击标记并展示卡片；没有数据的地区不需要补假点。
 - README 明确说明产品口径：展示的是 source-backed discovery/type-locality atlas，不是完整物种分布图。
+- 10 条 starter partial 达到后，先按 [`docs/butterfly-globe-prototype-acceptance.md`](butterfly-globe-prototype-acceptance.md) 冻结 review target 并验证首屏故事线、marker 卡片和低精度坐标视觉降级。
 
 ## 非目标
 
