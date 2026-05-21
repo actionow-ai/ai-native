@@ -11,6 +11,7 @@
 - Seed 数据 JSON Schema: [`data/species-seed.schema.json`](data/species-seed.schema.json)
 - 首批候选物种池: [`data/species-seed.candidates.json`](data/species-seed.candidates.json)
 - 候选物种来源核查队列: [`data/species-source-review.queue.json`](data/species-source-review.queue.json)
+- Seed readiness 矩阵: [`docs/seed-readiness-matrix.md`](docs/seed-readiness-matrix.md)
 
 ## 第一里程碑
 
