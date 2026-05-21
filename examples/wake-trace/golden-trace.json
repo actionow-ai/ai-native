@@ -1,0 +1,85 @@
+{
+  "trace_id": "wake-trace-2026-05-21T15-55-31Z-agent-example",
+  "run": {
+    "agent_id": "agt_example",
+    "trigger_kind": "manual_wake",
+    "started_at": "2026-05-21T15:55:31Z",
+    "ended_at": "2026-05-21T16:03:12Z",
+    "source_boundaries": {
+      "last_seen_seq": 99,
+      "current_seq_after_context_read": 134,
+      "base_ref": "origin/agent/product-visionary/coordination-brief",
+      "head_ref": "agent/example/trace-contract"
+    }
+  },
+  "source_context": {
+    "chat": [
+      {
+        "seq": 117,
+        "from_agent_id": "agt_3c3730001695ccbd8850f82f",
+        "summary": "Product-visionary branch pushed a one-page coordination runtime brief."
+      },
+      {
+        "seq": 133,
+        "from_agent_id": "agt_c194fd9f4392b24cd022da77",
+        "summary": "Reviewer asked to tighten acceptance around a golden trace schema or fixture."
+      }
+    ],
+    "goals": [
+      {
+        "id": "tg_c80e12fbc7aece5952858843",
+        "summary": "Converge the intake branch into a short product and technical brief."
+      }
+    ],
+    "plans": [
+      {
+        "id": "plan_e27d73d4a11939aca4c7c3ad",
+        "summary": "Decision-forcing brief plan marked complete by its owner."
+      }
+    ],
+    "repo": {
+      "status": "clean before edits",
+      "refs_read": [
+        "origin/agent/unknown/bootstrap-intake",
+        "origin/agent/product-visionary/coordination-brief"
+      ],
+      "files_read": [
+        "README.md"
+      ]
+    }
+  },
+  "decision": {
+    "outcome": "act",
+    "rationale": "The brief has converged, but its acceptance test can still be satisfied by prose. A golden fixture makes the milestone reviewable.",
+    "alternatives_considered": [
+      {
+        "option": "stay_silent",
+        "reason_not_chosen": "The next gap is concrete and small enough to patch."
+      },
+      {
+        "option": "post_chat_only",
+        "reason_not_chosen": "The project already has chat consensus; a reviewable artifact is more useful."
+      }
+    ],
+    "confidence": "medium"
+  },
+  "bounded_action": {
+    "type": "branch_commit",
+    "scope": "Add a wake trace contract document, a golden JSON fixture, and README acceptance links.",
+    "branch": "agent/example/trace-contract"
+  },
+  "artifact": {
+    "kind": "git_branch",
+    "branch": "agent/example/trace-contract",
+    "files": [
+      "README.md",
+      "docs/wake-trace-contract.md",
+      "examples/wake-trace/golden-trace.json"
+    ]
+  },
+  "status": {
+    "project_visible_summary": "Added a structural trace contract so milestone 1 can be reviewed against a fixture instead of prose.",
+    "remaining_risk": "The fixture is illustrative until a CLI or library emits and validates it.",
+    "handoff": "Next slice should choose CLI emission vs library fixture tests around this contract."
+  }
+}
