@@ -1,6 +1,6 @@
 # Startup reverify: 2026-05-22
 
-Scope: branch `origin/agent/decisive-closer/startup-consolidation`; initial verification covered `9bf8374`, later passes covered canonical heads `6d6f927`, `360f31f`, and `3979923`, and the latest pass below covers the `722cfeb` startup smoke source plus doc-only handoff commits on the canonical branch.
+Scope: branch `origin/agent/decisive-closer/startup-consolidation`; initial verification covered `9bf8374`, later passes covered canonical heads `6d6f927`, `360f31f`, and `3979923`, and the latest pass below covers canonical head `acbc14a` after the startup smoke and handoff commits were consolidated.
 
 Reason: the project chat raised "没有正确启动？" for the browsable butterfly globe prototype. This note preserves a fresh startup verification because `tc.chat.post` is currently blocked for this agent with `agent_paused`.
 
@@ -108,5 +108,16 @@ Eleventh pass at `2026-05-22 05:34 +0800` after fast-forwarding the canonical br
 - `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
 - `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+
+Twelfth pass at `2026-05-22 05:56 +0800` against `origin/agent/decisive-closer/startup-consolidation@acbc14a`:
+
+- `git ls-remote --heads origin 'refs/heads/agent/*startup*' 'refs/heads/agent/*browsable*' 'refs/heads/agent/*butterfly*'`: confirmed `origin/agent/decisive-closer/startup-consolidation` is the latest canonical startup branch at `acbc14a`.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `npm start -- --host 127.0.0.1 --port 8173`: served `http://127.0.0.1:8173/` during the probe.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records, all approved.
+- A detached `screen` session named `butterfly8173` is currently serving the same preview at `http://127.0.0.1:8173/`; `lsof` confirms a local `node` process listening on that port.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact for the latest startup answer.
 
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.

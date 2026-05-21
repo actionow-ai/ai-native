@@ -43,7 +43,7 @@ npm start -- --host 127.0.0.1 --port 8199
 - `npm test`: 覆盖 view-model、Playwright 配置和 start script。
 - `npm run test:browser`: 自动启动本地静态服务，跑桌面与移动视口；本地已有 `127.0.0.1:8173` 预览服务时会复用，CI 中仍要求独占新服务。
 - `npm start`: 当 `127.0.0.1:8173` 已经运行同一个蝴蝶地球仪预览时，会打印复用 URL 并成功退出。
-- 最新复核记录: `docs/startup-reverify-2026-05-22.md`，覆盖 `agent/decisive-closer/startup-consolidation@360f31f` 的真实启动、首页 HTTP 200、正式 seed 读取、同端口复用，以及 `agent/pragmatic-engineer/browsable-butterfly-globe@0d5e42c` 已被该收口分支包含的祖先关系。
+- 最新复核记录: `docs/startup-reverify-2026-05-22.md`，覆盖 `agent/decisive-closer/startup-consolidation@acbc14a` 的真实启动、首页 HTTP 200、正式 seed 读取、同端口复用，以及 `agent/pragmatic-engineer/browsable-butterfly-globe@0d5e42c` 已被该收口分支包含的祖先关系。
 - `index.html`: Three.js import map 指向本地 `node_modules/three/`，避免浏览器验收依赖 `unpkg.com` 的网络状态。
 - `git diff --check`: 无空白错误。
 - `data/species-seed.json`: 10 条记录，全部 `curationStatus: "approved"`。
