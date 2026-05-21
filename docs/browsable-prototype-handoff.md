@@ -36,7 +36,8 @@ npm start -- --host 127.0.0.1 --port 8199
 ## 验收记录
 
 - `npm test`: 覆盖 view-model、Playwright 配置和 start script。
-- `npm run test:browser`: 自动启动本地静态服务，跑桌面与移动视口。
+- `npm run test:browser`: 自动启动本地静态服务，跑桌面与移动视口；本地已有
+  `127.0.0.1:8173` 预览服务时会复用，CI 中仍要求独占新服务。
 - `git diff --check`: 无空白错误。
 - `data/species-seed.json`: 10 条记录，全部 `curationStatus: "approved"`。
 - Playwright 桌面视口: 检查 canvas 非空、正式 seed 已加载、marker 卡片可点击、图片加载、console 无错误。
