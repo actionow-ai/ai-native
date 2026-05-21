@@ -14,13 +14,14 @@
   {
     "scientificName": "Papilio machaon",
     "priority": 1,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/8225376",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3922436",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Papilio_machaon_-_ComputerHotline_(by).jpg",
+      "starterRecord": "data/species-seed.partial.json#papilio-machaon"
     },
-    "notes": "用户熟悉度高，适合早期演示；优先查 Linnaean 原始命名资料或权威目录。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 Europe，地图坐标必须保持低精度，不能升级成现代观察点。"
   },
   {
     "scientificName": "Vanessa cardui",
@@ -47,13 +48,14 @@
   {
     "scientificName": "Morpho menelaus",
     "priority": 1,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/5133523",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3915566",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "starterRecord": "data/species-seed.partial.json#morpho-menelaus"
     },
-    "notes": "视觉吸引力强，适合首屏；图片授权和地点来源都不能省略。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 South America，地图坐标必须保持低精度，不能升级成现代分布点。"
   },
   {
     "scientificName": "Ornithoptera alexandrae",
