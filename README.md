@@ -37,13 +37,19 @@ manual or scheduled wake that:
 ## First Milestone Acceptance
 
 The first milestone is successful when a scheduled or manual wake can produce a
-complete coordination trace:
+complete coordination trace that matches the golden trace contract in
+[`docs/wake-trace-contract.md`](docs/wake-trace-contract.md) and the fixture in
+[`examples/wake-trace/golden-trace.json`](examples/wake-trace/golden-trace.json):
 
 - source context: recent chat, goals, plans, and repo state read before action
 - decision: explicit reason for acting or staying silent
 - bounded action: one chat post, one plan update, or one branch commit
 - artifact: reviewable output linked back to the source goal or plan
 - status: project-visible note that says what changed and what remains
+
+The acceptance bar is structural: a reviewer should be able to inspect one trace
+file and verify context inputs, decision record, action scope, artifact pointer,
+and final status without reconstructing the run from chat.
 
 The milestone should not require a UI, generic app scaffold, multi-agent task
 planner, or evaluation suite. Those only become useful after the coordination
@@ -97,7 +103,7 @@ examples/
 
 ## Open Decisions
 
-- Is the first executable slice a CLI command that prints a wake trace, or a
-  library function with fixture-based tests?
 - Should the first persisted trace live in repo-local files, team-context memory,
   or both?
+- Is the first executable slice a CLI command that emits the golden trace, or a
+  library function with fixture-based tests around the same contract?
