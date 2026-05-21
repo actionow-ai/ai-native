@@ -1,21 +1,16 @@
 # 3D 蝴蝶地球仪原型验收门槛
 
-这份门槛用于 10 条 starter partial 到位后的收口。下一步不是继续扩物种数量，而是把数据冻结为 review target，并验证一个最薄 Three.js 原型能否讲清楚“蝴蝶发现史地图”的核心体验。
+这份门槛用于 10 条正式 seed 到位后的收口。下一步不是继续扩物种数量，而是验证一个最薄 Three.js 原型能否讲清楚“蝴蝶发现史地图”的核心体验。
 
 ## 数据冻结口径
 
-- Review target: `origin/agent/unknown/butterfly-seed-starters-10`
-- Target commit: `f284fe3`
-- 数据文件: `data/species-seed.partial.json`
-- 当前水位: 10 条 item-level `approved` starter partial，0 条正式 `data/species-seed.json`
-- 冻结规则: 在人工复核和正式 seed 生成前，不再向 starter partial 追加新物种。
+- Starter review target: `origin/agent/unknown/butterfly-seed-starters-10`
+- Starter target commit: `f284fe3`
+- 正式数据文件: `data/species-seed.json`
+- 当前水位: 10 条 item-level `approved` 正式 seed，来自冻结的 starter partial
+- 冻结规则: 原型前不再向 starter partial 追加新物种；新增物种必须先回到 partial review，再同步正式 seed。
 
-允许的下一步数据工作只有两类：
-
-1. 复核这 10 条 starter 的来源、授权、坐标精度和中文卡片文案。
-2. 从复核通过的 starter 生成正式 `data/species-seed.json`，并用 `data/species-seed.schema.json` 校验。
-
-生成正式 seed 候选时还必须断言：
+正式 seed 物化后仍必须持续断言：
 
 1. `speciesId` 集合与冻结 partial 保持一致。
 2. `coordinatePrecisionKm` 不能被升格成更精确的值，除非新增可追溯来源。
@@ -47,4 +42,4 @@
 - `curationStatus != "approved"` 或 `confidence = "low"` 的记录不得进入公开视图。
 - 对 10 条 starter 做一次全量卡片巡检，确认每条至少能打开图片、来源页和图片 source page。
 - 记录一张桌面截图和一张窄屏截图，检查 marker、卡片、许可证文本和低精度视觉样式没有遮挡或溢出。
-- 评审对象应是同时包含 brief、readiness matrix、数据冻结口径和本验收文档的同一分支；不要把 10 条 partial 直接改名成正式 seed 交付。
+- 评审对象应是同时包含 brief、readiness matrix、正式 seed、数据冻结口径和本验收文档的同一分支；不要绕过 schema/source gate 直接把 partial 当作公开数据。

@@ -1,11 +1,12 @@
 {
   "purpose": "Bridge the seed queue, image preflight, Wikidata P5304 locality candidates, and starter partial without confusing starter records with the final milestone seed dataset.",
-  "promotionRule": "A row can move to data/species-seed.partial.json as an item-level approved starter only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present. The milestone data/species-seed.json is not ready until at least 10 starter rows pass the schema gate and the formal seed file is generated from those reviewed rows.",
+  "promotionRule": "Rows move to data/species-seed.partial.json only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present. The milestone data/species-seed.json is materialized from the reviewed 10-row partial; speciesId, coordinatePrecisionKm, source URLs, image license, creator, and attribution must remain traceable to that frozen partial.",
   "sourceBranches": {
     "baseQueueAndSchema": "origin/agent/product-visionary/butterfly-queue-review",
     "imagePreflight": "origin/agent/unknown/butterfly-seed-preflight",
     "wikidataTypeLocalityCandidates": "origin/agent/unknown/wikidata-type-locality-candidates",
-    "starterPartial": "origin/agent/unknown/butterfly-seed-starters-10"
+    "starterPartial": "origin/agent/unknown/butterfly-seed-starters-10",
+    "formalSeed": "agent/unknown/seed-materialization"
   },
   "summary": {
     "queueSpeciesWithTaxonAndImagePreflight": 12,
@@ -13,7 +14,7 @@
     "starterPartialRows": 10,
     "wikidataRowsWithTypeLocalityCandidate": 12,
     "wikidataRowsWithTaxonAndImagePreflight": 0,
-    "approvedSeedRows": 0
+    "approvedSeedRows": 10
   },
   "rows": [
     {
@@ -24,8 +25,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#danaus-plexippus",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse North America marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse North America marker in the formal seed and do not upgrade it to a modern occurrence."
     },
     {
       "scientificName": "Papilio machaon",
@@ -35,8 +36,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#papilio-machaon",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse Europe marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse Europe marker in the formal seed and do not upgrade it to a modern occurrence."
     },
     {
       "scientificName": "Vanessa cardui",
@@ -46,8 +47,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#vanessa-cardui",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse Europe/Africa marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse Europe/Africa marker in the formal seed and do not upgrade it to a migration route or modern occurrence."
     },
     {
       "scientificName": "Vanessa atalanta",
@@ -67,8 +68,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#morpho-menelaus",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse South America marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse South America marker in the formal seed and do not upgrade it to a modern distribution point."
     },
     {
       "scientificName": "Ornithoptera alexandrae",
@@ -78,8 +79,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_type_locality_sensitive_coarse",
       "starterRecord": "data/species-seed.partial.json#ornithoptera-alexandrae",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the Biagi/Mambare River headwaters marker coarse and retain protected-species copy review before final seed publication."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the Biagi/Mambare River headwaters marker coarse in the formal seed and do not imply current live-population precision."
     },
     {
       "scientificName": "Heliconius erato",
@@ -89,8 +90,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_type_locality",
       "starterRecord": "data/species-seed.partial.json#heliconius-erato",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the Suriname country-level marker coarse and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the Suriname country-level marker coarse in the formal seed and do not upgrade it to a modern occurrence."
     },
     {
       "scientificName": "Battus philenor",
@@ -100,8 +101,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_type_locality",
       "starterRecord": "data/species-seed.partial.json#battus-philenor",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the Americas-level marker deliberately coarse before final seed publication."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the Americas-level marker deliberately coarse in the formal seed and do not replace it with a modern observation point."
     },
     {
       "scientificName": "Gonepteryx rhamni",
@@ -111,8 +112,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#gonepteryx-rhamni",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse Europe/Africa marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse Europe/Africa marker in the formal seed and do not upgrade it to a modern occurrence."
     },
     {
       "scientificName": "Aglais io",
@@ -132,8 +133,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#iphiclides-podalirius",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the deliberately coarse southern Europe/Africa marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the deliberately coarse southern Europe/Africa marker in the formal seed and do not upgrade it to a modern occurrence."
     },
     {
       "scientificName": "Parnassius apollo",
@@ -143,8 +144,8 @@
       "imageEvidence": "verified_in_starter",
       "localityEvidence": "verified_broad_original_description",
       "starterRecord": "data/species-seed.partial.json#parnassius-apollo",
-      "readiness": "starter_partial_ready_not_final_seed",
-      "nextAction": "Keep the Sweden country-level marker coarse and retain protected-species copy review before final seed publication."
+      "readiness": "included_in_initial_seed",
+      "nextAction": "Keep the Sweden country-level marker coarse in the formal seed and retain protected-species copy review in public copy."
     },
     {
       "scientificName": "Voltinia necaxa",

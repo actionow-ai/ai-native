@@ -70,7 +70,7 @@
 
 ## 第一里程碑验收
 
-数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；冻结后的工作不是继续扩物种，而是人工复核、schema/source gate，并从通过项生成正式 `data/species-seed.json` 候选。
+数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；当前正式 `data/species-seed.json` 已从这 10 条通过项物化。后续工作不是继续扩物种，而是用 schema/source gate 保护这个 seed，并进入 Three.js 原型验收。
 
 Three.js 原型的细化验收口径见 [`docs/butterfly-globe-prototype-acceptance.md`](butterfly-globe-prototype-acceptance.md)；它应与当前 brief 和 readiness matrix 一起作为唯一 review target，而不是并行评审另一条原型验收分支。
 
@@ -94,4 +94,4 @@ Three.js 原型的细化验收口径见 [`docs/butterfly-globe-prototype-accepta
 
 ## 下一步
 
-先基于冻结的 10 条 starter partial 生成 `data/species-seed.json` 候选并人工复核；另一个 agent 并行做最薄 3D 地球原型。数据未过 schema/source gate，或原型未满足上面的 Three.js 验收门槛前，不应该把 UI 演示当作完成。
+基于首版 `data/species-seed.json` 做最薄 3D 地球原型，并保留 schema/source gate 作为回归保护。数据未过 gate，或原型未满足上面的 Three.js 验收门槛前，不应该把 UI 演示当作完成。
