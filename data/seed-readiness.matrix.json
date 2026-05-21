@@ -5,12 +5,12 @@
     "baseQueueAndSchema": "origin/agent/product-visionary/butterfly-queue-review",
     "imagePreflight": "origin/agent/unknown/butterfly-seed-preflight",
     "wikidataTypeLocalityCandidates": "origin/agent/unknown/wikidata-type-locality-candidates",
-    "starterPartial": "origin/agent/unknown/butterfly-seed-starters"
+    "starterPartial": "origin/agent/unknown/butterfly-seed-starters-more"
   },
   "summary": {
     "queueSpeciesWithTaxonAndImagePreflight": 12,
-    "queueSpeciesWithTypeLocalityEvidence": 2,
-    "starterPartialRows": 2,
+    "queueSpeciesWithTypeLocalityEvidence": 4,
+    "starterPartialRows": 4,
     "wikidataRowsWithTypeLocalityCandidate": 12,
     "wikidataRowsWithTaxonAndImagePreflight": 0,
     "approvedSeedRows": 0
@@ -29,13 +29,14 @@
     },
     {
       "scientificName": "Papilio machaon",
-      "sourceSet": "priority_seed_queue",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
       "queuePriority": 1,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_or_original_description",
-      "nextAction": "Find a Linnaean original-description or catalog source for locality; do not use a modern observation point."
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_broad_original_description",
+      "starterRecord": "data/species-seed.partial.json#papilio-machaon",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the deliberately coarse Europe marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
     },
     {
       "scientificName": "Vanessa cardui",
@@ -59,13 +60,14 @@
     },
     {
       "scientificName": "Morpho menelaus",
-      "sourceSet": "priority_seed_queue",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
       "queuePriority": 1,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_or_original_description",
-      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_broad_original_description",
+      "starterRecord": "data/species-seed.partial.json#morpho-menelaus",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the deliberately coarse South America marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
     },
     {
       "scientificName": "Ornithoptera alexandrae",
