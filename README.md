@@ -51,4 +51,4 @@ npm test
 npm run test:browser
 ```
 
-浏览器验证会自动启动本地静态服务，在桌面与移动视口各截一张图到 `test-results/butterfly-globe/`，并检查 canvas 非空、正式 seed 已加载、卡片可点击、低精度坐标降级可见。
+浏览器验证会自动启动本地静态服务，默认使用 `8174` 端口以避免撞上手动预览的 `8173`；如需指定端口，可运行 `BUTTERFLY_GLOBE_PORT=8199 npm run test:browser`。验证会在桌面与移动视口各截一张图到 `test-results/butterfly-globe/`，并检查 canvas 非空、正式 seed 已加载、卡片可点击、低精度坐标降级可见。

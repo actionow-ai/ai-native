@@ -3,7 +3,8 @@ import pngjs from "pngjs";
 
 const { PNG } = pngjs;
 
-const url = process.env.BUTTERFLY_GLOBE_URL ?? "http://127.0.0.1:8173/";
+const browserTestPort = process.env.BUTTERFLY_GLOBE_PORT ?? "8174";
+const url = process.env.BUTTERFLY_GLOBE_URL ?? `http://127.0.0.1:${browserTestPort}/`;
 
 const viewports = [
   { name: "desktop", width: 1440, height: 900 },
@@ -19,7 +20,7 @@ for (const viewport of viewports) {
     page.on("pageerror", (error) => consoleErrors.push(error.message));
 
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
-    await page.goto(url, { waitUntil: "networkidle" });
+    await page.goto(url, { waitUntil: "domcontentloaded" });
     await page.waitForSelector("body[data-app-stage='dataset-ready']", { timeout: 20000 });
 
     await expect(page.locator("#dataset-status")).toContainText("data/species-seed.json");
