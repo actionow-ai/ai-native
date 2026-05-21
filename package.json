@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "start": "python3 -m http.server 8173 --bind 127.0.0.1",
     "test": "node --test test/*.test.mjs",
     "test:browser": "playwright test test/butterfly-globe.browser.spec.mjs"
   },

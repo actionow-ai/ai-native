@@ -38,10 +38,11 @@
 本地预览：
 
 ```bash
-python3 -m http.server 8173
+npm install
+npm start
 ```
 
-然后打开 `http://localhost:8173/`。
+然后打开 `http://127.0.0.1:8173/`。如果不想通过 npm 启动，也可以直接运行 `python3 -m http.server 8173 --bind 127.0.0.1`。
 
 本地验证：
 
