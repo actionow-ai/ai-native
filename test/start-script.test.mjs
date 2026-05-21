@@ -28,6 +28,31 @@ test("npm start serves the prototype and formal seed data", async (t) => {
   assert.equal(seed.every((record) => record.curationStatus === "approved"), true);
 });
 
+test("npm start reuses an existing butterfly preview on the requested port", async (t) => {
+  const firstServer = spawn("npm", ["start", "--", "--host", "127.0.0.1", "--port", "0"], {
+    cwd: repoRoot,
+    detached: process.platform !== "win32",
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  t.after(() => stopServer(firstServer));
+
+  const firstServerUrl = await waitForServerUrl(firstServer);
+  const secondServer = spawn(
+    "npm",
+    ["start", "--", "--host", "127.0.0.1", "--port", firstServerUrl.port],
+    {
+      cwd: repoRoot,
+      stdio: ["ignore", "pipe", "pipe"],
+    },
+  );
+
+  const result = await waitForProcessExit(secondServer);
+  assert.equal(result.code, 0, result.output);
+  assert.match(result.output, /Reusing butterfly globe preview/);
+  assert.ok(result.output.includes(firstServerUrl.href));
+});
+
 function waitForServerUrl(server) {
   return new Promise((resolve, reject) => {
     let output = "";
@@ -59,6 +84,21 @@ function waitForServerUrl(server) {
     server.stdout.on("data", onData);
     server.stderr.on("data", onData);
     server.on("exit", onExit);
+  });
+}
+
+function waitForProcessExit(child) {
+  return new Promise((resolve) => {
+    let output = "";
+    child.stdout.on("data", (chunk) => {
+      output += chunk.toString();
+    });
+    child.stderr.on("data", (chunk) => {
+      output += chunk.toString();
+    });
+    child.on("exit", (code, signal) => {
+      resolve({ code, signal, output });
+    });
   });
 }
 

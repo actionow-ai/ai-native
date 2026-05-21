@@ -35,6 +35,10 @@ const server = createServer(async (request, response) => {
 });
 
 server.on("error", (error) => {
+  if (error?.code === "EADDRINUSE") {
+    void handleAddressInUse();
+    return;
+  }
   console.error(`Failed to start preview server: ${error.message}`);
   process.exitCode = 1;
 });
@@ -111,6 +115,62 @@ function contentType(filePath) {
     ".svg": "image/svg+xml",
   };
   return types[extname(filePath)] ?? "application/octet-stream";
+}
+
+async function handleAddressInUse() {
+  const url = localPreviewUrl(host, port);
+  if (await isButterflyPreview(url)) {
+    console.log(`Reusing butterfly globe preview at ${url}`);
+    return;
+  }
+
+  console.error(`Failed to start preview server: address already in use ${host}:${port}`);
+  process.exitCode = 1;
+}
+
+function localPreviewUrl(hostValue, portValue) {
+  const displayHost = hostValue === "0.0.0.0" || hostValue === "::" ? "127.0.0.1" : hostValue;
+  const bracketedHost = displayHost.includes(":") ? `[${displayHost}]` : displayHost;
+  return `http://${bracketedHost}:${portValue}/`;
+}
+
+async function isButterflyPreview(url) {
+  try {
+    const [html, seed] = await Promise.all([
+      fetchText(url),
+      fetchJson(new URL("/data/species-seed.json", url)),
+    ]);
+    return (
+      html.includes("Butterfly Discovery Atlas") &&
+      Array.isArray(seed) &&
+      seed.length > 0 &&
+      seed.every((record) => record?.curationStatus === "approved")
+    );
+  } catch {
+    return false;
+  }
+}
+
+async function fetchText(url) {
+  const response = await fetchWithTimeout(url);
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.text();
+}
+
+async function fetchJson(url) {
+  const response = await fetchWithTimeout(url);
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+}
+
+async function fetchWithTimeout(url) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 1000);
+  try {
+    return await fetch(url, { signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
 }
 
 function writePlain(response, statusCode, body) {
