@@ -80,27 +80,29 @@ window.addEventListener("resize", () => {
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-renderer.domElement.addEventListener("pointermove", (event) => {
-  const hit = pickMarker(event);
-  if (hit !== hoveredMarker) {
-    hoveredMarker = hit;
-    els.hoverLabel.textContent = hit?.userData.record.cardModel.title ?? "Global view";
-    renderer.domElement.style.cursor = hit ? "pointer" : "grab";
-  }
-});
+if (renderer) {
+  renderer.domElement.addEventListener("pointermove", (event) => {
+    const hit = pickMarker(event);
+    if (hit !== hoveredMarker) {
+      hoveredMarker = hit;
+      els.hoverLabel.textContent = hit?.userData.record.cardModel.title ?? "全球概览";
+      renderer.domElement.style.cursor = hit ? "pointer" : "grab";
+    }
+  });
 
-renderer.domElement.addEventListener("click", (event) => {
-  const hit = pickMarker(event);
-  if (hit) selectRecord(hit.userData.record);
-});
+  renderer.domElement.addEventListener("click", (event) => {
+    const hit = pickMarker(event);
+    if (hit) selectRecord(hit.userData.record);
+  });
+}
 
 async function loadDataset() {
   try {
     const dataset = await fetchDataset();
     records = prepareSpeciesRecords(dataset.raw);
     els.status.textContent = dataset.formal
-      ? "Formal seed dataset · data/species-seed.json"
-      : "Starter review data · data/species-seed.partial.json";
+      ? "正式 seed 数据 · data/species-seed.json"
+      : "Starter 评审数据 · data/species-seed.partial.json";
     els.status.classList.toggle("is-review", !dataset.formal);
     els.speciesCount.textContent = String(records.length);
     els.precisionCount.textContent = String(
@@ -109,9 +111,13 @@ async function loadDataset() {
     addMarkers(records);
     renderTray(records);
     selectRecord(selectDemoPath(records)[0] ?? records[0]);
+    document.body.dataset.appStage = "dataset-ready";
+    document.body.dataset.seedKind = dataset.formal ? "formal" : "partial";
+    document.body.dataset.recordCount = String(records.length);
   } catch (error) {
-    els.status.textContent = "Dataset unavailable";
-    els.panel.innerHTML = `<div class="empty-label"><strong>Unable to load data</strong><span>${escapeHtml(
+    document.body.dataset.appStage = "dataset-error";
+    els.status.textContent = "数据不可用";
+    els.panel.innerHTML = `<div class="empty-label"><strong>无法读取数据</strong><span>${escapeHtml(
       error.message,
     )}</span></div>`;
   }
@@ -344,7 +350,7 @@ function selectRecord(record) {
 
 function renderCard(card) {
   const sourceLinks = card.sourceUrls
-    .map((url, index) => `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">source ${index + 1}</a>`)
+    .map((url, index) => `<a href="${escapeHtml(url)}" target="_blank" rel="noreferrer">来源 ${index + 1}</a>`)
     .join("");
   const image = card.imageUrl
     ? `<img src="${escapeHtml(card.imageUrl)}" alt="${escapeHtml(card.title)}" />`
@@ -352,8 +358,8 @@ function renderCard(card) {
 
   return `
     <div class="specimen-heading">
-      <p>SPECIMEN LABEL</p>
-      <button class="close-panel" id="close-panel" type="button" aria-label="Close specimen label">×</button>
+      <p>标本标签</p>
+      <button class="close-panel" id="close-panel" type="button" aria-label="关闭标本标签">×</button>
     </div>
     <figure class="specimen-image">${image}</figure>
     <div class="specimen-title">
@@ -362,19 +368,19 @@ function renderCard(card) {
       <em>${escapeHtml(card.scientificName)} ${escapeHtml(card.authority)}</em>
     </div>
     <dl class="specimen-facts">
-      <div><dt>Basis</dt><dd>${escapeHtml(card.locationBasis)}</dd></div>
-      <div><dt>Locality</dt><dd>${escapeHtml(card.location)}</dd></div>
-      <div><dt>Year</dt><dd>${escapeHtml(String(card.year ?? "unknown"))}</dd></div>
-      <div><dt>Precision</dt><dd>${escapeHtml(card.precisionLabel)} · ${escapeHtml(formatPrecision(card.precisionKm))}</dd></div>
-      <div><dt>Confidence</dt><dd>${escapeHtml(card.confidence)}</dd></div>
-      <div><dt>Image</dt><dd>${escapeHtml(card.license)} · ${escapeHtml(card.creator)}</dd></div>
+      <div><dt>口径</dt><dd>${escapeHtml(card.locationBasis)}</dd></div>
+      <div><dt>地点</dt><dd>${escapeHtml(card.location)}</dd></div>
+      <div><dt>年份</dt><dd>${escapeHtml(String(card.year ?? "unknown"))}</dd></div>
+      <div><dt>精度</dt><dd>${escapeHtml(card.precisionLabel)} · ${escapeHtml(formatPrecision(card.precisionKm))}</dd></div>
+      <div><dt>可信度</dt><dd>${escapeHtml(card.confidence)}</dd></div>
+      <div><dt>图片</dt><dd>${escapeHtml(card.license)} · ${escapeHtml(card.creator)}</dd></div>
     </dl>
     <p class="summary">${escapeHtml(card.summary)}</p>
     <p class="location-caption">${escapeHtml(card.locationCaption)}</p>
     <ol class="provenance">${card.provenance.map((step) => `<li>${escapeHtml(step)}</li>`).join("")}</ol>
     <div class="source-row">
       ${sourceLinks}
-      ${card.imageSourcePage ? `<a href="${escapeHtml(card.imageSourcePage)}" target="_blank" rel="noreferrer">image source</a>` : ""}
+      ${card.imageSourcePage ? `<a href="${escapeHtml(card.imageSourcePage)}" target="_blank" rel="noreferrer">图片来源</a>` : ""}
     </div>
     <p class="attribution">${escapeHtml(card.attribution ?? "")}</p>
   `;
@@ -438,6 +444,7 @@ function escapeHtml(value) {
 
 function showRuntimeError(error) {
   const message = error instanceof Error ? error.message : String(error);
-  els.status.textContent = `Runtime error: ${message}`;
-  els.panel.innerHTML = `<div class="empty-label"><strong>Runtime error</strong><span>${escapeHtml(message)}</span></div>`;
+  document.body.dataset.appStage = "runtime-error";
+  els.status.textContent = `运行时错误: ${message}`;
+  els.panel.innerHTML = `<div class="empty-label"><strong>运行时错误</strong><span>${escapeHtml(message)}</span></div>`;
 }

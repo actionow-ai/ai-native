@@ -208,10 +208,11 @@ h1 {
   border: 1px solid rgba(239, 232, 210, 0.28);
   border-radius: 6px;
   background:
-    linear-gradient(180deg, rgba(20, 27, 24, 0.9), rgba(8, 16, 15, 0.92)),
+    linear-gradient(180deg, rgba(20, 27, 24, 0.98), rgba(8, 16, 15, 0.99)),
     repeating-linear-gradient(0deg, rgba(239, 232, 210, 0.04), rgba(239, 232, 210, 0.04) 1px, transparent 1px, transparent 6px);
   box-shadow: var(--shadow);
   pointer-events: auto;
+  z-index: 4;
 }
 
 .specimen-heading {

@@ -38,7 +38,17 @@
 本地预览：
 
 ```bash
-python3 -m http.server 8099
+python3 -m http.server 8173
 ```
 
-然后打开 `http://localhost:8099/`。
+然后打开 `http://localhost:8173/`。
+
+本地验证：
+
+```bash
+npm install
+npm test
+npm run test:browser
+```
+
+浏览器验证会自动启动本地静态服务，在桌面与移动视口各截一张图到 `test-results/butterfly-globe/`，并检查 canvas 非空、正式 seed 已加载、卡片可点击、低精度坐标降级可见。
