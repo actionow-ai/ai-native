@@ -151,5 +151,81 @@
       "locationCaptionZh": "原始描述写作 America meridionali，坐标按南美粗粒度展示。"
     },
     "curationStatus": "approved"
+  },
+  {
+    "speciesId": "vanessa-cardui",
+    "scientificName": "Vanessa cardui",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 4299368,
+    "displayNames": {
+      "zh": "小红蛱蝶",
+      "en": "Painted lady"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Carduo Europae, Africae (Europe and Africa)",
+      "modernCountry": null,
+      "latitude": 35.0,
+      "longitude": 15.0,
+      "coordinatePrecisionKm": 3500,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3919445",
+        "https://api.gbif.org/v1/species/4299368"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758 gives the original locality as 'Habitat in Carduo Europae, Africae'. The plotted point is a deliberately coarse Europe/Africa centroid, not a migration range or modern occurrence."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Isiwal",
+      "attribution": "Isiwal, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "小红蛱蝶",
+      "summaryZh": "小红蛱蝶是全球迁飞能力很强的蛱蝶；首版地图只使用林奈原始描述中的宽泛欧洲/非洲地点口径。",
+      "locationCaptionZh": "原始描述写作 Europae, Africae，坐标降级为欧洲/非洲粗略中心点。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "gonepteryx-rhamni",
+    "scientificName": "Gonepteryx rhamni",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 1920712,
+    "displayNames": {
+      "zh": "鼠李钩粉蝶",
+      "en": "Common brimstone"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Rhamno Europae, Africae (Europe and Africa)",
+      "modernCountry": null,
+      "latitude": 35.0,
+      "longitude": 15.0,
+      "coordinatePrecisionKm": 3500,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3922457",
+        "https://api.gbif.org/v1/species/1920712"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758 gives the original locality as 'Habitat in Rhamno Europae, Africae'. The plotted point is a deliberately coarse Europe/Africa centroid, not a modern occurrence or host-plant record."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Common_brimstone_butterfly_%28Gonepteryx_rhamni%29_male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Common_brimstone_butterfly_(Gonepteryx_rhamni)_male.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Charles J. Sharp",
+      "attribution": "Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "鼠李钩粉蝶",
+      "summaryZh": "鼠李钩粉蝶雄蝶呈明亮柠檬黄色，是欧洲常见粉蝶；这里仅展示林奈原始描述中的宽泛欧洲/非洲地点。",
+      "locationCaptionZh": "原始描述写作 Europae, Africae，坐标按低精度历史地点展示。"
+    },
+    "curationStatus": "approved"
   }
 ]
