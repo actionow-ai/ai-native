@@ -232,3 +232,16 @@ Twenty-first pass at `2026-05-22 07:25 +0800` after a proactive wake:
 - `npm test`: 8 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
+
+Twenty-second pass at `2026-05-22 07:32 +0800` after a proactive wake:
+
+- `git fetch --prune`: completed with no remote changes reported.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/product-visionary/prototype-start-command refs/heads/agent/contrarian-critic/verify-browsable-start refs/heads/agent/blue-sky/verify-butterfly-globe-startup`: confirmed the canonical branch is `b4d611eb61a60917b3a7d6701391ea36b57b5cec`; the other startup helper branches remain divergent.
+- `git diff --stat origin/agent/pragmatic-engineer/browsable-butterfly-globe..origin/agent/blue-sky/verify-butterfly-globe-startup`: showed the only helper branch item worth absorbing here is the browser-test/manual-preview port separation, not the Python static-server rollback.
+- TDD red check: `node --test test/playwright-config.test.mjs` failed while `playwright.config.mjs` still fixed the browser test server on `8173`.
+- Implemented the minimal fix: Playwright browser tests now default to `8174` and honor `BUTTERFLY_GLOBE_PORT`, while `npm start` keeps the Node preview server and `8173` manual preview path.
+- `node --test test/playwright-config.test.mjs`: 2 tests passed.
+- `npm test`: 10 tests passed, 0 failed.
+- `git diff --check`: clean.
+- `npm run test:browser`: 2 Playwright checks passed; reran as `env -u FORCE_COLOR -u NO_COLOR npm run test:browser` to confirm the same 2 checks pass without the local shell color-warning noise.
