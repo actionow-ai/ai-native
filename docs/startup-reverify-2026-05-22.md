@@ -144,4 +144,15 @@ Fourteenth pass at `2026-05-22 06:33 +0800` against `agent/decisive-closer/start
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
 
+Fifteenth pass at `2026-05-22 06:37 +0800` against `agent/decisive-closer/startup-consolidation@cc22cb4`:
+
+- `git fetch --prune`: completed and discovered `origin/agent/blue-sky/discovery-lens-startup-cc22cb4`.
+- `git diff --stat HEAD..origin/agent/blue-sky/discovery-lens-startup-cc22cb4`: confirmed the new branch only adds `docs/discovery-time-lens.md` and a README link; it does not change the startup path, data, scripts, or tests.
+- `git merge-base --is-ancestor HEAD origin/agent/blue-sky/discovery-lens-startup-cc22cb4`: confirmed the discovery lens branch is ahead of this startup baseline, but it remains a separate blue-sky note rather than a startup fix.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all 10 have `curationStatus === "approved"`.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
