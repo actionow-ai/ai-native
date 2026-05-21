@@ -15,9 +15,12 @@
 - GBIF/Commons 图片预检: [`data/species-image.preflight.json`](data/species-image.preflight.json)
 - Wikidata type locality 候选: [`data/type-locality-candidates.wikidata.json`](data/type-locality-candidates.wikidata.json)
 - Seed readiness 矩阵: [`docs/seed-readiness-matrix.md`](docs/seed-readiness-matrix.md)
+- 3D 原型验收门槛: [`docs/butterfly-globe-prototype-acceptance.md`](docs/butterfly-globe-prototype-acceptance.md)
 
 ## 第一里程碑
 
 交付一个可评审的静态 3D 地球原型范围和一份 10-20 个物种的 seed 数据。每个物种至少要有：科学名、图片授权、地点坐标、地点口径、年份或命名信息、来源 URL、中文卡片文案和人工校验状态。
 
 `preflight`、`candidates` 和 readiness 矩阵只用于加速策展，不是公开地图数据。`data/species-seed.partial.json` 只暂存已经过人工核查的 starter 记录；正式交付仍以至少 10 条记录的 `data/species-seed.json` 为准，并且每条记录必须通过 `data/species-seed.schema.json` 的 `approved` 门槛。
+
+当前 10 条 starter partial 已达到原型前置水位；后续以冻结的数据 review target 生成正式 seed 候选，并按 3D 原型验收门槛验证 Three.js 首屏故事线、marker 卡片、来源/许可证展示和低精度坐标视觉降级。
