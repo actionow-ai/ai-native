@@ -14,6 +14,7 @@
 - 经纬度来自策展判断；地点只能定位到国家/区域时，必须增大 `coordinatePrecisionKm`，并在 `sourceNotes` 说明降级原因。
 - 图片必须有 source page、license、creator 和 attribution；只有图片 URL 没有授权页不通过。
 - 中文卡片文案不能暗示现生种群精确位置，尤其是保护敏感物种。
+- `curationStatus = "approved"` 的记录必须通过 schema 的附加门槛：GBIF usageKey 不得为 null，坐标和坐标精度不得为 null，可信度不能是 low，图片授权字段不能留空。
 
 ## 推荐核查顺序
 
@@ -27,5 +28,7 @@
 ## 分工队列
 
 `data/species-source-review.queue.json` 是核查工作队列，不是公开 seed 数据。每个候选先补齐 `evidence.typeLocality` 和 `evidence.imageLicense`，再移动到 `data/species-seed.json`。
+
+`data/species-image.preflight.json` 记录了首批候选的 GBIF accepted usageKey 和 Commons 图片授权候选，可用于补 `gbifUsageKey` 与 `image` 字段，但不能替代地点来源核查。`data/type-locality-candidates.wikidata.json` 记录了 Wikidata P5304 有结构化地点的候选，可用于扩大后续候选池，但其中记录仍需重新核对 accepted taxon、命名信息、来源质量、图片授权和坐标精度，不能直接提升为 approved seed。
 
 当前已知风险：快速查询显示 Wikidata 可以辅助名称、图片和外部 ID，但不能稳定给出蝴蝶物种的结构化 type locality。因此不要把“接口查不到地点”理解为无地点，也不要把接口能查到图片理解为授权已经可用。

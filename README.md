@@ -11,7 +11,11 @@
 - Seed 数据 JSON Schema: [`data/species-seed.schema.json`](data/species-seed.schema.json)
 - 首批候选物种池: [`data/species-seed.candidates.json`](data/species-seed.candidates.json)
 - 候选物种来源核查队列: [`data/species-source-review.queue.json`](data/species-source-review.queue.json)
+- GBIF/Commons 图片预检: [`data/species-image.preflight.json`](data/species-image.preflight.json)
+- Wikidata type locality 候选: [`data/type-locality-candidates.wikidata.json`](data/type-locality-candidates.wikidata.json)
 
 ## 第一里程碑
 
 交付一个可评审的静态 3D 地球原型范围和一份 10-20 个物种的 seed 数据。每个物种至少要有：科学名、图片授权、地点坐标、地点口径、年份或命名信息、来源 URL、中文卡片文案和人工校验状态。
+
+`preflight` 和 `candidates` 文件只用于加速策展，不是公开地图数据。只有通过 `data/species-seed.schema.json` 的 `approved` 门槛，并由人工确认地点来源、坐标精度和图片授权后，记录才应进入 `data/species-seed.json`。

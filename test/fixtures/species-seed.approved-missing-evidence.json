@@ -1,0 +1,372 @@
+[
+  {
+    "speciesId": "danaus-plexippus",
+    "scientificName": "Danaus plexippus",
+    "taxonAuthority": "Linnaeus, 1758",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": "君主斑蝶",
+      "en": "monarch butterfly"
+    },
+    "discoveryPoint": {
+      "basis": "type_locality",
+      "label": "North America",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://example.invalid/source"
+      ],
+      "sourceNotes": "Invalid fixture: approved records must not pass without accepted taxon, coordinates, precision, and image evidence."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "君主斑蝶",
+      "summaryZh": "这是一个故意缺少 GBIF 和图片授权证据的 approved 记录，用于验证 schema 会拒绝。",
+      "locationCaptionZh": "地点证据不完整，不能公开展示。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "placeholder-candidate-01",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-02",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-03",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-04",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-05",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-06",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-07",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-08",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  },
+  {
+    "speciesId": "placeholder-candidate-09",
+    "scientificName": "Placeholder candidate",
+    "taxonAuthority": "Curator, 2026",
+    "gbifUsageKey": null,
+    "displayNames": {
+      "zh": null,
+      "en": null
+    },
+    "discoveryPoint": {
+      "basis": "curated_surrogate",
+      "label": "Pending locality",
+      "modernCountry": null,
+      "latitude": null,
+      "longitude": null,
+      "coordinatePrecisionKm": null,
+      "confidence": "low",
+      "year": null,
+      "sourceUrls": [
+        "https://example.invalid/pending"
+      ],
+      "sourceNotes": "Placeholder candidate is intentionally incomplete and not approved."
+    },
+    "image": {
+      "url": null,
+      "sourcePage": null,
+      "license": null,
+      "creator": null,
+      "attribution": null
+    },
+    "card": {
+      "titleZh": "待核查候选",
+      "summaryZh": "这是一条用于补足数组长度的待核查候选，不代表公开地图数据。",
+      "locationCaptionZh": "地点尚未完成来源核查。"
+    },
+    "curationStatus": "needs_sources"
+  }
+]

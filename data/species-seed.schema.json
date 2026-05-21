@@ -8,6 +8,72 @@
   "items": {
     "type": "object",
     "additionalProperties": false,
+    "allOf": [
+      {
+        "if": {
+          "required": ["curationStatus"],
+          "properties": {
+            "curationStatus": {
+              "const": "approved"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "gbifUsageKey": {
+              "type": "integer"
+            },
+            "discoveryPoint": {
+              "type": "object",
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "minimum": -90,
+                  "maximum": 90
+                },
+                "longitude": {
+                  "type": "number",
+                  "minimum": -180,
+                  "maximum": 180
+                },
+                "coordinatePrecisionKm": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "confidence": {
+                  "enum": ["high", "medium"]
+                }
+              }
+            },
+            "image": {
+              "type": "object",
+              "properties": {
+                "url": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "sourcePage": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "license": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "creator": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "attribution": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            }
+          }
+        }
+      }
+    ],
     "required": [
       "speciesId",
       "scientificName",
