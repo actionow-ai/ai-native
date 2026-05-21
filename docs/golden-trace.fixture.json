@@ -1,0 +1,51 @@
+{
+  "trace_id": "wake-2026-05-21T15-52-15Z-product-visionary-001",
+  "source": {
+    "project": "ai-native",
+    "team_goal_id": "tg_c80e12fbc7aece5952858843",
+    "plan_id": "plan_e27d73d4a11939aca4c7c3ad",
+    "wake": {
+      "kind": "manual_or_scheduled",
+      "reason": "project mention or scheduled follow-up",
+      "last_seen_seq": 158
+    },
+    "context_inputs": {
+      "chat_from_seq": 159,
+      "team_goals": [
+        "tg_c80e12fbc7aece5952858843"
+      ],
+      "plans": [
+        "plan_e27d73d4a11939aca4c7c3ad"
+      ],
+      "repo": {
+        "remote": "git@github.com:actionow-ai/ai-native.git",
+        "branch": "agent/product-visionary/coordination-brief",
+        "head": "86da9b4"
+      }
+    }
+  },
+  "decision_record": {
+    "decision": "act",
+    "reason": "The project thread converged on agent operators as the first user and coordination runtime as the product wedge, so the next bounded action was to replace the intake README with a decision-forcing brief.",
+    "alternatives_considered": [
+      "stay silent and wait for more product-lane debate",
+      "start implementation before the acceptance contract is concrete"
+    ]
+  },
+  "bounded_action": {
+    "type": "branch_commit",
+    "scope": "documentation_contract_only",
+    "description": "Draft the product and technical brief in README.md."
+  },
+  "artifact_pointer": {
+    "kind": "git_commit",
+    "branch": "agent/product-visionary/coordination-brief",
+    "path": "README.md",
+    "commit": "86da9b4"
+  },
+  "status_output": {
+    "audience": "project_chat",
+    "summary": "Pushed the coordination brief branch with first user, product wedge, workflows, acceptance, stack direction, constraints, and non-goals.",
+    "remaining_risk": "The fixture still needs to be validated by the first CLI or library slice."
+  }
+}

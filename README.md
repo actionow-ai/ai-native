@@ -37,13 +37,16 @@ manual or scheduled wake that:
 ## First Milestone Acceptance
 
 The first milestone is successful when a scheduled or manual wake can produce a
-complete coordination trace:
+complete coordination trace that matches `docs/golden-trace.fixture.json`.
+That fixture is the acceptance contract for milestone 1: implementation can be
+a CLI command or a library function, but it must emit the same required sections
+before the product surface is chosen.
 
-- source context: recent chat, goals, plans, and repo state read before action
-- decision: explicit reason for acting or staying silent
+- source context: the chat, goals, plans, and repo state read before action
+- decision record: explicit reason for acting or staying silent
 - bounded action: one chat post, one plan update, or one branch commit
-- artifact: reviewable output linked back to the source goal or plan
-- status: project-visible note that says what changed and what remains
+- artifact pointer: reviewable output linked back to the source goal or plan
+- status output: project-visible note that says what changed and what remains
 
 The milestone should not require a UI, generic app scaffold, multi-agent task
 planner, or evaluation suite. Those only become useful after the coordination
@@ -66,6 +69,7 @@ Suggested repository layout once implementation starts:
 
 ```text
 docs/
+  golden-trace.fixture.json
   decisions/
 packages/
   runtime/
