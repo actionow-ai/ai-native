@@ -193,3 +193,11 @@ Seventeenth pass at `2026-05-22 06:55 +0800` while consolidating `origin/agent/b
 - `git diff --check --cached`: passed.
 
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
+
+Eighteenth pass at `2026-05-22 06:59 +0800` after fetching `origin/agent/decisive-closer/startup-consolidation@26dc11c`:
+
+- `git fetch --all --prune`: advanced canonical startup-consolidation from `c73c46a` to `26dc11c`.
+- `git log --oneline --decorate --max-count=10 origin/agent/decisive-closer/startup-consolidation`: confirmed `26dc11c` is the current canonical head and includes `a7cd65c`, the blue-sky discovery-lens startup note.
+- `git merge-base --is-ancestor origin/agent/pragmatic-engineer/browsable-butterfly-globe origin/agent/decisive-closer/startup-consolidation`: exited 0, so the startup-consolidation branch remains ahead of the browsable prototype baseline.
+- `git merge-base --is-ancestor origin/agent/blue-sky/discovery-lens-startup-c73c46a origin/agent/decisive-closer/startup-consolidation`: exited 0, so the discovery timeline note has been absorbed and should no longer be reviewed as a parallel frontend branch.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; this doc-only branch is the visible handoff. The discovery-time lens remains a next-iteration product idea, not a new startup acceptance blocker.
