@@ -38,10 +38,13 @@
 本地预览：
 
 ```bash
-python3 -m http.server 8173
+npm install
+npm start
 ```
 
 然后打开 `http://localhost:8173/`。
+
+`npm start` 只是固定启动同一个静态服务：`python3 -m http.server 8173 --bind 127.0.0.1`。如果已经装过依赖，也可以直接运行这条 Python 命令。
 
 本地验证：
 
