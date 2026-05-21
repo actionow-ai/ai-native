@@ -26,13 +26,14 @@
   {
     "scientificName": "Vanessa cardui",
     "priority": 1,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/4299368",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3919445",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "starterRecord": "data/species-seed.partial.json#vanessa-cardui"
     },
-    "notes": "不要把全球迁徙分布误写成首次发现地点；地点只跟命名/模式产地证据走。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 Europe/Africa，地图坐标必须保持低精度，不能升级成迁徙路线或现代观察点。"
   },
   {
     "scientificName": "Vanessa atalanta",
@@ -94,13 +95,14 @@
   {
     "scientificName": "Gonepteryx rhamni",
     "priority": 3,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/1920712",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3922457",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Common_brimstone_butterfly_(Gonepteryx_rhamni)_male.jpg",
+      "starterRecord": "data/species-seed.partial.json#gonepteryx-rhamni"
     },
-    "notes": "欧洲经典物种，可在首批数量不足时补位。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 Europe/Africa，地图坐标必须保持低精度。"
   },
   {
     "scientificName": "Aglais io",
@@ -116,23 +118,25 @@
   {
     "scientificName": "Iphiclides podalirius",
     "priority": 3,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/1938214",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3919597",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "starterRecord": "data/species-seed.partial.json#iphiclides-podalirius"
     },
-    "notes": "可与 Papilio machaon 形成凤蝶对比；注意不要让比较文案替代地点证据。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 southern Europe/Africa，地图坐标必须保持低精度。"
   },
   {
     "scientificName": "Parnassius apollo",
     "priority": 2,
-    "status": "needs_sensitive_copy_review",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/1938810",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3913588",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "starterRecord": "data/species-seed.partial.json#parnassius-apollo"
     },
-    "notes": "高山和保护叙事强；公开标记应优先使用低精度历史地点。"
+    "notes": "已加入 starter partial；保护叙事仍需低精度历史地点和谨慎文案，不能公开推断现生种群位置。"
   }
 ]
