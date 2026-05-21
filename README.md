@@ -17,6 +17,7 @@
 - Wikidata type locality 候选: [`data/type-locality-candidates.wikidata.json`](data/type-locality-candidates.wikidata.json)
 - Seed readiness 矩阵: [`docs/seed-readiness-matrix.md`](docs/seed-readiness-matrix.md)
 - 3D 原型验收门槛: [`docs/butterfly-globe-prototype-acceptance.md`](docs/butterfly-globe-prototype-acceptance.md)
+- 蓝天探索: [`docs/discovery-time-lens.md`](docs/discovery-time-lens.md)
 
 ## 第一里程碑
 
