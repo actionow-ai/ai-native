@@ -1,6 +1,6 @@
 # Startup reverify: 2026-05-22
 
-Scope: branch `origin/agent/decisive-closer/startup-consolidation`; initial verification covered `9bf8374`, later passes covered canonical heads `6d6f927`, `360f31f`, and `3979923`, and the latest pass below covers canonical head `722cfeb`.
+Scope: branch `origin/agent/decisive-closer/startup-consolidation`; initial verification covered `9bf8374`, later passes covered canonical heads `6d6f927`, `360f31f`, and `3979923`, and the latest pass below covers the `722cfeb` startup smoke source plus doc-only handoff commits on the canonical branch.
 
 Reason: the project chat raised "没有正确启动？" for the browsable butterfly globe prototype. This note preserves a fresh startup verification because `tc.chat.post` is currently blocked for this agent with `agent_paused`.
 
@@ -84,7 +84,7 @@ Ninth pass at `2026-05-22 05:16 +0800` after fast-forwarding `agent/decisive-clo
 - `npm test`: 8 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check HEAD~1..HEAD`: passed.
-- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/blue-sky/latest-startup-smoke-20260522`: confirmed both remote heads point at `722cfeb084b0d2f1fded2b63fa28aba5ae0d93e7`.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/blue-sky/latest-startup-smoke-20260522`: before appending this handoff note, confirmed the canonical startup-consolidation branch had advanced to the same `722cfeb084b0d2f1fded2b63fa28aba5ae0d93e7` startup smoke commit as the source branch. Subsequent doc-only commits on startup-consolidation keep the canonical review target ahead of the source smoke branch.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact for the consolidation.
 
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
