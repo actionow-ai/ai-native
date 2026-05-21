@@ -1,0 +1,134 @@
+[
+  {
+    "scientificName": "Danaus plexippus",
+    "priority": 1,
+    "status": "needs_type_locality_source",
+    "evidence": {
+      "gbifAcceptedTaxon": "sample_checked",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "先作为端到端样例：GBIF usageKey 已抽样验证，但地点和图片授权仍需独立来源。"
+  },
+  {
+    "scientificName": "Papilio machaon",
+    "priority": 1,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "用户熟悉度高，适合早期演示；优先查 Linnaean 原始命名资料或权威目录。"
+  },
+  {
+    "scientificName": "Vanessa cardui",
+    "priority": 1,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "不要把全球迁徙分布误写成首次发现地点；地点只跟命名/模式产地证据走。"
+  },
+  {
+    "scientificName": "Vanessa atalanta",
+    "priority": 2,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "适合补欧洲常见物种，但仍需单独核对命名地点。"
+  },
+  {
+    "scientificName": "Morpho menelaus",
+    "priority": 1,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "视觉吸引力强，适合首屏；图片授权和地点来源都不能省略。"
+  },
+  {
+    "scientificName": "Ornithoptera alexandrae",
+    "priority": 2,
+    "status": "needs_sensitive_copy_review",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "保护敏感物种；即使地点证据可靠，公开文案也应避免精确现生种群定位。"
+  },
+  {
+    "scientificName": "Heliconius erato",
+    "priority": 2,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "新热带代表；先查分类目录和原始描述地点，再定坐标精度。"
+  },
+  {
+    "scientificName": "Battus philenor",
+    "priority": 2,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "北美代表；适合补地区多样性，但不能用现代观测点替代命名地点。"
+  },
+  {
+    "scientificName": "Gonepteryx rhamni",
+    "priority": 3,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "欧洲经典物种，可在首批数量不足时补位。"
+  },
+  {
+    "scientificName": "Aglais io",
+    "priority": 3,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "形态展示效果好；先确认 accepted name 和命名地点。"
+  },
+  {
+    "scientificName": "Iphiclides podalirius",
+    "priority": 3,
+    "status": "needs_all_sources",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "可与 Papilio machaon 形成凤蝶对比；注意不要让比较文案替代地点证据。"
+  },
+  {
+    "scientificName": "Parnassius apollo",
+    "priority": 2,
+    "status": "needs_sensitive_copy_review",
+    "evidence": {
+      "gbifAcceptedTaxon": "missing",
+      "typeLocality": "missing",
+      "imageLicense": "missing"
+    },
+    "notes": "高山和保护叙事强；公开标记应优先使用低精度历史地点。"
+  }
+]
