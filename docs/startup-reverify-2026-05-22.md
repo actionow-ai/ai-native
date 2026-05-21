@@ -219,3 +219,16 @@ Twentieth pass at `2026-05-22 07:17 +0800` after a proactive wake:
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
 
 The dirty `ai-native` worktree in this agent directory is an older starter-locality branch and is not the review target.
+
+Twenty-first pass at `2026-05-22 07:25 +0800` after a proactive wake:
+
+- `git fetch --prune`: completed with no remote changes reported.
+- `git status --short --branch`: confirmed the local branch is clean and tracking `origin/agent/decisive-closer/startup-consolidation`.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/browsable-butterfly-handoff`: confirmed the canonical branch is `acf6214037b2c5a9ba223e42fc6f901ef66f31ac`, while the earlier browsable sources remain `0d5e42c493e0e41ae19863c0f000940daa40c4c7` and `cf37a26e5c039cbe693d8506a9ba2ebfdc25ffd7`.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact.
