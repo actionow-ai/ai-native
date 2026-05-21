@@ -168,5 +168,6 @@ Sixteenth pass at `2026-05-22 06:50 +0800` against `agent/decisive-closer/startu
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
 - `npm start -- --host 127.0.0.1 --port 8173`: exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
 - `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact for the latest startup answer.
 
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
