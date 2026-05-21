@@ -1,28 +1,25 @@
 # ai-native
 
-This repository is currently an empty project shell. The first useful step is
-to make the project intent explicit enough that agents and humans can work
-without guessing.
+`ai-native` 当前产品方向已经切换为一个交互式 3D 蝴蝶发现地球仪。
 
-## Intake
+首版不做通用地图产品，也不继续旧的 agent coordination runtime 方向。第一里程碑先把产品、数据、授权和技术边界收敛成可评审 brief，再进入 Three.js 原型实现。
 
-Open questions to settle before implementation:
+## 当前评审文档
 
-- What problem should this repository solve first?
-- Who is the first user or operator?
-- What is the smallest demo that would prove the direction?
-- Which runtime, framework, and deployment target should be assumed?
-- What should be out of scope for the first pass?
+- [3D 蝴蝶发现地球仪 brief](docs/butterfly-discovery-globe-brief.md)
 
-## Suggested First Artifact
+## 第一里程碑
 
-Create a short product and technical brief with:
+交付一个数据先行的 3D 地球原型：
 
-- a one-paragraph mission statement
-- three concrete user workflows
-- the first milestone's acceptance criteria
-- a proposed stack and repository layout
-- known constraints, integrations, and non-goals
+- 地球上显示 10-20 个蝴蝶物种的首次发现或模式产地标记。
+- 点击标记后展示图片、中文名/英文名/学名、发现地点、命名年份/命名者、简短说明和来源链接。
+- 每条记录必须带 provenance：地点来源、坐标来源、图片授权来源。
+- 图片只接受可再使用授权：CC0、Public Domain、CC BY、CC BY-SA，明确排除 NC/ND/未知授权。
 
-Once that brief exists, implementation work can start on a branch with tests
-and a narrower scope.
+## 非目标
+
+- 不做完整百科数据库。
+- 不做用户上传、收藏、账号或 CMS。
+- 不用未经核验的“分布地”替代首次发现或模式产地。
+- 不在 brief 阶段写 UI scaffold。
