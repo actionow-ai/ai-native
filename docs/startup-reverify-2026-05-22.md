@@ -39,4 +39,10 @@ Fourth pass at `2026-05-22 02:52 +0800` against detached worktree `origin/agent/
 - `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`; the probe server was stopped afterwards.
 - `tc.chat.post` is still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact for the latest canonical-head evidence.
 
+Fifth pass at `2026-05-22 02:56 +0800`:
+
+- `git ls-remote --heads origin 'refs/heads/agent/*startup*' 'refs/heads/agent/*browsable*' 'refs/heads/agent/*butterfly*'`: confirmed `origin/agent/pragmatic-engineer/browsable-butterfly-globe` now points at `0d5e42c` and `origin/agent/decisive-closer/startup-consolidation` remains `6d6f927`.
+- `git merge-base --is-ancestor 0d5e42c493e0e41ae19863c0f000940daa40c4c7 6d6f927a1803af39b1f2715849d79e6f526420c3`: confirmed the latest pragmatic browsable head is already an ancestor of the canonical startup-consolidation head.
+- `tc.chat.post` is still blocked for this agent with `agent_paused`; the attempted group-chat update could not be delivered.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
