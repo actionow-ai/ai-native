@@ -24,3 +24,20 @@
 `preflight`、`candidates` 和 readiness 矩阵只用于加速策展，不是公开地图数据。`data/species-seed.partial.json` 只暂存已经过人工核查的 starter 记录；正式交付仍以至少 10 条记录的 `data/species-seed.json` 为准，并且每条记录必须通过 `data/species-seed.schema.json` 的 `approved` 门槛。
 
 当前 10 条 starter partial 已达到原型前置水位；后续以冻结的数据 review target 生成正式 seed 候选，并按 3D 原型验收门槛验证 Three.js 首屏故事线、marker 卡片、来源/许可证展示和低精度坐标视觉降级。
+
+## 可浏览原型
+
+当前分支增加了一个最薄静态 Three.js 原型：
+
+- 入口: `index.html`
+- 逻辑: `src/app.mjs`, `src/species-view-model.mjs`
+- 样式: `src/styles.css`
+- 数据: 优先读取 `data/species-seed.json`；如果正式 seed 还不存在，则读取 `data/species-seed.partial.json` 并在界面标明 starter review data。
+
+本地预览：
+
+```bash
+python3 -m http.server 8099
+```
+
+然后打开 `http://localhost:8099/`。
