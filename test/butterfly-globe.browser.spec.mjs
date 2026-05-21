@@ -19,7 +19,7 @@ for (const viewport of viewports) {
     page.on("pageerror", (error) => consoleErrors.push(error.message));
 
     await page.setViewportSize({ width: viewport.width, height: viewport.height });
-    await page.goto(url, { waitUntil: "networkidle" });
+    await page.goto(url, { waitUntil: "domcontentloaded" });
     await page.waitForSelector("body[data-app-stage='dataset-ready']", { timeout: 20000 });
 
     await expect(page.locator("#dataset-status")).toContainText("data/species-seed.json");
