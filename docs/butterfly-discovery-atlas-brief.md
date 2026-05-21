@@ -33,6 +33,10 @@
 - Wikipedia/Wikidata 没有外部来源支撑的地点。
 - 没有 license/creator/source page 的图片 URL。
 
+## 数据风险验证记录
+
+2026-05-21 快速验证过一个自动化假设：直接用 Wikidata 查询“蝴蝶类群 + 图片 + type locality(P5307)”没有返回可用 seed 结果；单查 `Danaus plexippus` 也能看到图片、分类、作者等字段，但没有结构化的 type locality。结论是 Wikidata 可以辅助补齐名称、图片和外部 ID，但首批“发现地点”仍应按原始描述、分类目录或人工策展来源逐条确认。
+
 ## 数据源策略
 
 - GBIF Species API：用于校验 accepted taxon、usageKey、科属和作者年份。已用 `Danaus plexippus` 验证 `species/match` 可用。
