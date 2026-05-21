@@ -70,7 +70,7 @@
 
 ## 第一里程碑验收
 
-数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；冻结后的工作不是继续扩物种，而是人工复核、schema/source gate，并从通过项生成正式 `data/species-seed.json` 候选。
+数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；冻结后的工作不是继续扩物种，而是人工复核、schema/source gate，并从通过项生成正式 `data/species-seed.json` 候选。更细的 Three.js 原型验收门槛见 [`docs/butterfly-globe-prototype-acceptance.md`](butterfly-globe-prototype-acceptance.md)。
 
 - `data/species-seed.json` 有 10 条物种记录，并能通过 JSON Schema 校验。
 - 每条记录至少有一个地点来源 URL、一个图片来源 URL、license、creator/attribution、地点可信度和中文卡片说明。
@@ -79,6 +79,7 @@
 - 首屏有一条可讲述的发现史切片：默认镜头从全球概览落到 2-3 个对比地点，而不是随机点阵。
 - marker 卡片至少展示授权图片、中文名、科学名、命名年份、地点口径、来源链接、图片许可证和坐标精度提示。
 - `coordinatePrecisionKm` 很大的记录必须有视觉降级，例如更大的半透明范围圈、低精度标签或弱化 pin，不得显示成精确采集点。
+- 原型必须能录一段 60-90 秒 demo path：全球概览 -> 2-3 个对比发现地点 -> 点击卡片查看证据、授权和坐标可信度。
 - README 明确说明产品口径：展示的是 source-backed discovery/type-locality atlas，不是完整物种分布图。
 
 ## 非目标
