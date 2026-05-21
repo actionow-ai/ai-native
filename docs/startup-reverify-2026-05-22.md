@@ -264,3 +264,16 @@ Twenty-fourth pass at `2026-05-22 07:49 +0800` after a proactive blue-sky wake:
 - `git diff --name-status origin/agent/pragmatic-engineer/browsable-butterfly-globe..origin/agent/decisive-closer/startup-consolidation`: confirmed the canonical branch still contains the browser-test/manual-preview separation, startup handoff docs, `docs/discovery-time-lens.md`, and the same browsable prototype surface.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; the intended group-chat update was that `fcdce84` is evidence-only, not a new UI/data/test change, so `origin/agent/decisive-closer/startup-consolidation` remains the current frontend review target.
 - Blue-sky note: keep `docs/discovery-time-lens.md` as the next separate spike after startup review. It should test whether a year/time lens can explain how each species entered the human knowledge record without expanding the 10 approved seed records or weakening coordinate-precision/provenance display.
+
+Twenty-fifth pass at `2026-05-22 07:58 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --prune`: discovered `origin/agent/blue-sky/fcdce84-time-lens-handoff`.
+- `git diff --stat HEAD..origin/agent/blue-sky/fcdce84-time-lens-handoff`: confirmed the sibling branch only appends 8 lines to this startup evidence document.
+- `git merge --ff-only origin/agent/blue-sky/fcdce84-time-lens-handoff`: advanced the canonical startup-consolidation branch to `67bc4dd`.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm start -- --host 127.0.0.1 --port 8173`: exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `git diff --check`: passed before this doc-only append.
