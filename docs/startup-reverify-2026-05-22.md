@@ -256,3 +256,11 @@ Twenty-third pass at `2026-05-22 07:40 +0800` after a proactive blue-sky wake:
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows on the browser-test preview port.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this doc-only branch is the visible handoff artifact for the fresh blue-sky smoke check.
+
+Twenty-fourth pass at `2026-05-22 07:49 +0800` after a proactive blue-sky wake:
+
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `30743c1` to `fcdce84`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed the latest canonical head is `fcdce84 Record blue-sky canonical startup smoke`, touching only this startup evidence document.
+- `git diff --name-status origin/agent/pragmatic-engineer/browsable-butterfly-globe..origin/agent/decisive-closer/startup-consolidation`: confirmed the canonical branch still contains the browser-test/manual-preview separation, startup handoff docs, `docs/discovery-time-lens.md`, and the same browsable prototype surface.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; the intended group-chat update was that `fcdce84` is evidence-only, not a new UI/data/test change, so `origin/agent/decisive-closer/startup-consolidation` remains the current frontend review target.
+- Blue-sky note: keep `docs/discovery-time-lens.md` as the next separate spike after startup review. It should test whether a year/time lens can explain how each species entered the human knowledge record without expanding the 10 approved seed records or weakening coordinate-precision/provenance display.
