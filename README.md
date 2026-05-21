@@ -38,10 +38,12 @@
 本地预览：
 
 ```bash
-python3 -m http.server 8173
+npm start
 ```
 
 然后打开 `http://localhost:8173/`。
+
+如果不想使用 npm，也可以运行 `python3 -m http.server 8173` 预览同一个静态原型。
 
 本地验证：
 
