@@ -2,8 +2,13 @@ import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
+import playwrightConfig from "../playwright.config.mjs";
 
 const repoRoot = fileURLToPath(new URL("..", import.meta.url));
+
+test("browser test reuses an already running local preview server outside CI", () => {
+  assert.equal(playwrightConfig.webServer.reuseExistingServer, !process.env.CI);
+});
 
 test("npm start serves the prototype and formal seed data", async (t) => {
   const server = spawn("npm", ["start", "--", "--host", "127.0.0.1", "--port", "0"], {
