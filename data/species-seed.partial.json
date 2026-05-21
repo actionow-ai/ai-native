@@ -151,5 +151,157 @@
       "locationCaptionZh": "原始描述写作 America meridionali，坐标按南美粗粒度展示。"
     },
     "curationStatus": "approved"
+  },
+  {
+    "speciesId": "vanessa-cardui",
+    "scientificName": "Vanessa cardui",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 4299368,
+    "displayNames": {
+      "zh": "小红蛱蝶",
+      "en": "Painted lady"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Europae, Africae (Europe and Africa)",
+      "modernCountry": null,
+      "latitude": 25.0,
+      "longitude": 20.0,
+      "coordinatePrecisionKm": 4200,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3919445",
+        "https://api.gbif.org/v1/species/4299368"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758, page 475, gives the original locality as 'Habitat in Carduo Europae, Africae'. The plotted point is a coarse Europe-Africa midpoint, not a migration record or modern occurrence."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Isiwal",
+      "attribution": "Isiwal, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "小红蛱蝶",
+      "summaryZh": "小红蛱蝶以长距离迁飞闻名；首版地图只展示林奈原始描述中的宽泛欧非产地口径。",
+      "locationCaptionZh": "原始描述写作 Europae, Africae，坐标降级为欧非之间的粗略区域点。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "gonepteryx-rhamni",
+    "scientificName": "Gonepteryx rhamni",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 1920712,
+    "displayNames": {
+      "zh": "钩粉蝶",
+      "en": "Common brimstone"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Europae, Africae (Europe and Africa)",
+      "modernCountry": null,
+      "latitude": 25.0,
+      "longitude": 20.0,
+      "coordinatePrecisionKm": 4200,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3922457",
+        "https://api.gbif.org/v1/species/1920712"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758 gives the original locality as 'Habitat in Rhamno Europae, Africae'. The plotted point is a deliberately coarse Europe-Africa midpoint, not a specimen occurrence."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Common_brimstone_butterfly_%28Gonepteryx_rhamni%29_male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Common_brimstone_butterfly_(Gonepteryx_rhamni)_male.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Charles J. Sharp",
+      "attribution": "Charles J. Sharp, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "钩粉蝶",
+      "summaryZh": "钩粉蝶的黄绿色翅面很适合做形态识别样例；这里采用林奈记录中的欧非宽泛地点。",
+      "locationCaptionZh": "原始描述写作 Europae, Africae，坐标保持为低精度区域点。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "iphiclides-podalirius",
+    "scientificName": "Iphiclides podalirius",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 1938214,
+    "displayNames": {
+      "zh": "燕尾凤蝶",
+      "en": "Scarce swallowtail"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Europae australis & Africae (southern Europe and Africa)",
+      "modernCountry": null,
+      "latitude": 30.0,
+      "longitude": 18.0,
+      "coordinatePrecisionKm": 3400,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3919597",
+        "https://api.gbif.org/v1/species/1938214"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758 lists the first locality phrase for Papilio podalirius as 'Habitat in Europae australis & Africae Brassica'. The plotted point is a coarse southern Europe/Africa regional midpoint."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Zeynel Cebeci",
+      "attribution": "Zeynel Cebeci, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "燕尾凤蝶",
+      "summaryZh": "燕尾凤蝶和金凤蝶可形成凤蝶类群对比；首版只使用原始描述中的南欧和非洲宽泛地点。",
+      "locationCaptionZh": "原始描述写作 Europae australis & Africae，坐标按区域级别展示。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "parnassius-apollo",
+    "scientificName": "Parnassius apollo",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 1938810,
+    "displayNames": {
+      "zh": "阿波罗绢蝶",
+      "en": "Apollo"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Svecia (Sweden)",
+      "modernCountry": "Sweden",
+      "latitude": 62.0,
+      "longitude": 15.0,
+      "coordinatePrecisionKm": 700,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3913588",
+        "https://api.gbif.org/v1/species/1938810"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758 includes the locality phrase 'frequens in Svecia' after host-plant notes. The plotted point is a coarse Sweden centroid and must not be treated as a current population location."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Didier Descouens",
+      "attribution": "Didier Descouens, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "阿波罗绢蝶",
+      "summaryZh": "阿波罗绢蝶适合展示高山蝶类和保护语境；公开地图只给历史文献中的瑞典粗粒度点。",
+      "locationCaptionZh": "原始描述写作 frequens in Svecia，坐标降级为瑞典国家级粗略中心点。"
+    },
+    "curationStatus": "approved"
   }
 ]
