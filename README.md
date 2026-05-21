@@ -45,7 +45,7 @@ npm start
 然后打开 `http://localhost:8173/`。
 如果 `8173` 上已经是同一个蝴蝶地球仪预览，脚本会复用并打印 URL；如果端口被其他服务占用，运行 `npm start -- --port 8199`。
 
-如果不想使用 npm，也可以运行 `python3 -m http.server 8173` 预览同一个静态原型。
+如果不想使用 `npm start`，也可以在已经执行过 `npm install` 后运行 `python3 -m http.server 8173` 预览同一个静态原型；浏览器会从本地 `node_modules/three/` 读取 Three.js。
 
 本地验证：
 
