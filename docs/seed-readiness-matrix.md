@@ -9,6 +9,8 @@
 
 关键结论：现在有 10 条可继续保留在 partial 里的 starter 记录，但还没有完整 `data/species-seed.json`。主线 12 个常见/展示友好物种里，`Danaus plexippus`、`Heliconius erato`、`Papilio machaon`、`Morpho menelaus`、`Vanessa cardui`、`Gonepteryx rhamni`、`Iphiclides podalirius`、`Parnassius apollo`、`Ornithoptera alexandrae` 和 `Battus philenor` 已补到 starter 水位；其余主线物种 `Vanessa atalanta` 和 `Aglais io` 仍缺 type locality 或原始描述地点来源。P5304 候选有地点线索，但缺 accepted taxon、图片授权、命名来源核对和坐标精度复核。
 
+收口口径：把 `origin/agent/unknown/butterfly-seed-starters-10` 冻结为当前数据 review target。冻结后不继续扩物种数量，下一步只允许做人工复核、schema/source gate、从 10 条 partial 生成正式 `data/species-seed.json` 候选，以及为 Three.js 原型准备验收样例。
+
 后续补 seed 时建议按这个顺序做：
 
 1. 先从 `data/species-source-review.queue.json` 选一个主线物种。
