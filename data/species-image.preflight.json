@@ -1,0 +1,266 @@
+[
+  {
+    "speciesId": "danaus-plexippus",
+    "scientificName": "Danaus plexippus",
+    "gbifUsageKey": 5133088,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/5133088"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q212398",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Danaus plexippus MHNT.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Danaus_plexippus_MHNT.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Danaus_plexippus_MHNT.jpg/1280px-Danaus_plexippus_MHNT.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Danaus_plexippus_MHNT.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Didier Descouens",
+      "attribution": "Didier Descouens / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "papilio-machaon",
+    "scientificName": "Papilio machaon",
+    "gbifUsageKey": 8225376,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 98,
+      "sourceUrl": "https://api.gbif.org/v1/species/8225376"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q179530",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Papilio machaon - ComputerHotline (by).jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Papilio_machaon_-_ComputerHotline_%28by%29.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Papilio_machaon_-_ComputerHotline_%28by%29.jpg/1280px-Papilio_machaon_-_ComputerHotline_%28by%29.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Papilio_machaon_-_ComputerHotline_(by).jpg",
+      "license": "CC BY 2.0",
+      "creator": "Thomas Bresson",
+      "attribution": "Thomas Bresson / CC BY 2.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "vanessa-cardui",
+    "scientificName": "Vanessa cardui",
+    "gbifUsageKey": 4299368,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/4299368"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q158603",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Vanessa cardui on Lavandula angustifolia-2459.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg/1280px-Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Vanessa_cardui_on_Lavandula_angustifolia-2459.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Isiwal",
+      "attribution": "Isiwal / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "vanessa-atalanta",
+    "scientificName": "Vanessa atalanta",
+    "gbifUsageKey": 1898286,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 97,
+      "sourceUrl": "https://api.gbif.org/v1/species/1898286"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q156454",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Red admiral butterfly on purple coneflower in New York (11147).jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Red_admiral_butterfly_on_purple_coneflower_in_New_York_%2811147%29.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Red_admiral_butterfly_on_purple_coneflower_in_New_York_%2811147%29.jpg/1280px-Red_admiral_butterfly_on_purple_coneflower_in_New_York_%2811147%29.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Red_admiral_butterfly_on_purple_coneflower_in_New_York_(11147).jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Rhododendrites",
+      "attribution": "Rhododendrites / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "morpho-menelaus",
+    "scientificName": "Morpho menelaus",
+    "gbifUsageKey": 5133523,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/5133523"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q545709",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Morpho menelaus huebneri MHNT Male.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Morpho_menelaus_huebneri_MHNT_Male.jpg/1280px-Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Didier Descouens",
+      "attribution": "Didier Descouens / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "ornithoptera-alexandrae",
+    "scientificName": "Ornithoptera alexandrae",
+    "gbifUsageKey": 1937441,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/1937441"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q932602",
+    "commonsImageCandidate": {
+      "fileTitle": "File:013602428 Ornithoptera alexandrae dorsal male.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/013602428_Ornithoptera_alexandrae_dorsal_male.jpg/1280px-013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "license": "CC BY 4.0",
+      "creator": "Peter Wing",
+      "attribution": "Peter Wing / Natural History Museum / CC BY 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. This protected-species candidate needs extra copy review before public display, and still must not be promoted until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "heliconius-erato",
+    "scientificName": "Heliconius erato",
+    "gbifUsageKey": 1900872,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/1900872"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q2427227",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Heliconius erato Richard Bartz.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Heliconius_erato_Richard_Bartz.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Heliconius_erato_Richard_Bartz.jpg/1280px-Heliconius_erato_Richard_Bartz.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Heliconius_erato_Richard_Bartz.jpg",
+      "license": "CC BY-SA 2.5",
+      "creator": "Richard Bartz",
+      "attribution": "Richard Bartz / CC BY-SA 2.5"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "battus-philenor",
+    "scientificName": "Battus philenor",
+    "gbifUsageKey": 5141342,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/5141342"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q1758032",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Battus philenor 02.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Battus_philenor_02.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Battus_philenor_02.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Battus_philenor_02.jpg",
+      "license": "Public domain",
+      "creator": "Ryan Kaldari",
+      "attribution": "Ryan Kaldari / public domain"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "gonepteryx-rhamni",
+    "scientificName": "Gonepteryx rhamni",
+    "gbifUsageKey": 1920712,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/1920712"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q206474",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Common brimstone butterfly (Gonepteryx rhamni) male.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Common_brimstone_butterfly_%28Gonepteryx_rhamni%29_male.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Common_brimstone_butterfly_%28Gonepteryx_rhamni%29_male.jpg/1280px-Common_brimstone_butterfly_%28Gonepteryx_rhamni%29_male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Common_brimstone_butterfly_(Gonepteryx_rhamni)_male.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Charles J. Sharp",
+      "attribution": "Charles J. Sharp / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "aglais-io",
+    "scientificName": "Aglais io",
+    "gbifUsageKey": 4535827,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/4535827"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q158699",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Aglais io Mitterbach 01.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/44/Aglais_io_Mitterbach_01.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Aglais_io_Mitterbach_01.jpg/1280px-Aglais_io_Mitterbach_01.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Aglais_io_Mitterbach_01.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Uoaei1",
+      "attribution": "Uoaei1 / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "iphiclides-podalirius",
+    "scientificName": "Iphiclides podalirius",
+    "gbifUsageKey": 1938214,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 97,
+      "sourceUrl": "https://api.gbif.org/v1/species/1938214"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q31080",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Erik kırlangıçkuyruk - Iphiclides podalirius.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg/1280px-Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Erik_k%C4%B1rlang%C4%B1%C3%A7kuyruk_-_Iphiclides_podalirius.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Zeynel Cebeci",
+      "attribution": "Zeynel Cebeci / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  },
+  {
+    "speciesId": "parnassius-apollo",
+    "scientificName": "Parnassius apollo",
+    "gbifUsageKey": 1938810,
+    "gbifMatch": {
+      "status": "ACCEPTED",
+      "confidence": 99,
+      "sourceUrl": "https://api.gbif.org/v1/species/1938810"
+    },
+    "wikidataEntity": "https://www.wikidata.org/wiki/Q41633",
+    "commonsImageCandidate": {
+      "fileTitle": "File:Parnassius apollo MHNT CUT 2013 3 3female Aragnouet dos.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "thumbUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg/1280px-Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Parnassius_apollo_MHNT_CUT_2013_3_3female_Aragnouet_dos.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Didier Descouens",
+      "attribution": "Didier Descouens / CC BY-SA 4.0"
+    },
+    "curationStatus": "image_preflight_only",
+    "notes": "GBIF taxon and Commons image metadata verified. Do not promote to data/species-seed.json until the type locality or original-description locality source is curated."
+  }
+]

@@ -9,6 +9,7 @@
 - 产品/数据/技术 brief: [`docs/butterfly-discovery-atlas-brief.md`](docs/butterfly-discovery-atlas-brief.md)
 - Seed 数据 JSON Schema: [`data/species-seed.schema.json`](data/species-seed.schema.json)
 - 首批候选物种池: [`data/species-seed.candidates.json`](data/species-seed.candidates.json)
+- GBIF/Commons 预检记录: [`data/species-image.preflight.json`](data/species-image.preflight.json)
 
 ## 第一里程碑
 

@@ -40,6 +40,8 @@
 - Biodiversity Heritage Library、原始描述文献、Butterflies of America、LepIndex 或同等级分类资料：用于确认 type locality / 原始描述地点。
 - 人工策展记录：每条 seed 数据必须保存 `sourceNotes`，说明为什么这个点可以在地图上展示。
 
+`data/species-image.preflight.json` 只保存 GBIF accepted taxon 与 Wikimedia Commons 图片候选的预检结果，不能直接当作公开地图数据。把记录提升到 `data/species-seed.json` 前，仍必须补齐 type locality / original description locality 来源与地点可信度。
+
 ## 首批候选池
 
 候选池先追求“用户熟悉 + 地理分布有辨识度 + 图片容易授权”，但只有通过来源校验后才能进入首版地图：
