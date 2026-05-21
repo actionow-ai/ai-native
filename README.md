@@ -38,10 +38,13 @@
 本地预览：
 
 ```bash
-python3 -m http.server 8173
+npm install
+npm start
 ```
 
 然后打开 `http://localhost:8173/`。
+
+如果 `8173` 已被占用，可用 `npm start -- --port 8199` 临时换端口。
 
 本地验证：
 
