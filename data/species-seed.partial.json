@@ -303,5 +303,84 @@
       "locationCaptionZh": "原始描述写作 frequens in Svecia，坐标降级为瑞典国家级粗略中心点。"
     },
     "curationStatus": "approved"
+  },
+  {
+    "speciesId": "ornithoptera-alexandrae",
+    "scientificName": "Ornithoptera alexandrae",
+    "taxonAuthority": "(Rothschild, 1907)",
+    "gbifUsageKey": 1937441,
+    "displayNames": {
+      "zh": "亚历山大鸟翼凤蝶",
+      "en": "Queen Alexandra's birdwing"
+    },
+    "discoveryPoint": {
+      "basis": "type_locality",
+      "label": "Biagi, headwaters of the Mambare River, British New Guinea",
+      "modernCountry": "Papua New Guinea",
+      "latitude": -8.6,
+      "longitude": 147.7,
+      "coordinatePrecisionKm": 150,
+      "confidence": "medium",
+      "year": 1907,
+      "sourceUrls": [
+        "https://zenodo.org/records/16256953",
+        "https://www.sbbt.org.uk/conservation/queen-alexandras-birdwing/",
+        "https://ornithoptera.org/ornithoptera-list/alexandrae",
+        "https://api.gbif.org/v1/species/1937441"
+      ],
+      "sourceNotes": "Rothschild's 1907 Novitates Zoologicae paper names Troides alexandrae. SBBT places the first specimen at the type locality near Biagi at the headwaters of the Mambare River, and ornithoptera.org gives the type locality as Headwaters (Biagi) of the Mambare River. The marker is deliberately coarse and must not be treated as a current population or collection location."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/70/013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "license": "CC BY 4.0",
+      "creator": "Peter Wing",
+      "attribution": "Peter Wing / Natural History Museum / CC BY 4.0"
+    },
+    "card": {
+      "titleZh": "亚历山大鸟翼凤蝶",
+      "summaryZh": "亚历山大鸟翼凤蝶是体型最大的蝴蝶之一；首版只展示历史命名和类型地点线索，并保持保护敏感物种的低精度标记。",
+      "locationCaptionZh": "类型地点为 Biagi/Mambare River headwaters，坐标按区域级别降精度展示。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "battus-philenor",
+    "scientificName": "Battus philenor",
+    "taxonAuthority": "(Linnaeus, 1771)",
+    "gbifUsageKey": 5141342,
+    "displayNames": {
+      "zh": "美洲蓝凤蝶",
+      "en": "Pipevine swallowtail"
+    },
+    "discoveryPoint": {
+      "basis": "type_locality",
+      "label": "America",
+      "modernCountry": null,
+      "latitude": 10.0,
+      "longitude": -75.0,
+      "coordinatePrecisionKm": 6500,
+      "confidence": "medium",
+      "year": 1771,
+      "sourceUrls": [
+        "https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera/ditrysia/papilionoidea/papilionidae/papilioninae/battus/",
+        "https://www.butterfliesofamerica.com/L/battus_p_philenor_types.htm",
+        "https://api.gbif.org/v1/species/5141342"
+      ],
+      "sourceNotes": "Funet lists Papilio philenor Linnaeus, 1771, Mantissa Plantarum 2:535, with type locality 'America'. Butterflies of America also labels the Linnean lectotype/paralectotype locality as TL: America. The plotted point is an Americas-level placeholder, not a modern distribution or observation point."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Battus_philenor_02.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Battus_philenor_02.jpg",
+      "license": "Public domain",
+      "creator": "Ryan Kaldari",
+      "attribution": "Ryan Kaldari / public domain"
+    },
+    "card": {
+      "titleZh": "美洲蓝凤蝶",
+      "summaryZh": "美洲蓝凤蝶是北美常见的马兜铃类凤蝶代表；由于模式地点只到 America，首版地图只能给洲级低精度标记。",
+      "locationCaptionZh": "模式地点写作 America，坐标按整个美洲的粗粒度占位展示。"
+    },
+    "curationStatus": "approved"
   }
 ]

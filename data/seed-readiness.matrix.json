@@ -1,16 +1,16 @@
 {
   "purpose": "Bridge the seed queue, image preflight, Wikidata P5304 locality candidates, and starter partial without confusing starter records with the final milestone seed dataset.",
-  "promotionRule": "A row can move to data/species-seed.partial.json as an item-level approved starter only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present. The milestone data/species-seed.json is not ready until at least 10 starter rows pass the schema gate.",
+  "promotionRule": "A row can move to data/species-seed.partial.json as an item-level approved starter only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present. The milestone data/species-seed.json is not ready until at least 10 starter rows pass the schema gate and the formal seed file is generated from those reviewed rows.",
   "sourceBranches": {
     "baseQueueAndSchema": "origin/agent/product-visionary/butterfly-queue-review",
     "imagePreflight": "origin/agent/unknown/butterfly-seed-preflight",
     "wikidataTypeLocalityCandidates": "origin/agent/unknown/wikidata-type-locality-candidates",
-    "starterPartial": "origin/agent/unknown/butterfly-seed-starters-8"
+    "starterPartial": "origin/agent/unknown/butterfly-seed-starters-10"
   },
   "summary": {
     "queueSpeciesWithTaxonAndImagePreflight": 12,
-    "queueSpeciesWithTypeLocalityEvidence": 8,
-    "starterPartialRows": 8,
+    "queueSpeciesWithTypeLocalityEvidence": 10,
+    "starterPartialRows": 10,
     "wikidataRowsWithTypeLocalityCandidate": 12,
     "wikidataRowsWithTaxonAndImagePreflight": 0,
     "approvedSeedRows": 0
@@ -72,13 +72,14 @@
     },
     {
       "scientificName": "Ornithoptera alexandrae",
-      "sourceSet": "priority_seed_queue",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
       "queuePriority": 2,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_and_sensitive_copy_review",
-      "nextAction": "Find historical locality evidence and keep public marker precision intentionally coarse because this is a protected-species candidate."
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_type_locality_sensitive_coarse",
+      "starterRecord": "data/species-seed.partial.json#ornithoptera-alexandrae",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the Biagi/Mambare River headwaters marker coarse and retain protected-species copy review before final seed publication."
     },
     {
       "scientificName": "Heliconius erato",
@@ -93,13 +94,14 @@
     },
     {
       "scientificName": "Battus philenor",
-      "sourceSet": "priority_seed_queue",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
       "queuePriority": 2,
-      "gbifEvidence": "preflight_available",
-      "imageEvidence": "preflight_available",
-      "localityEvidence": "missing",
-      "readiness": "blocked_on_type_locality_or_original_description",
-      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_broad_type_locality",
+      "starterRecord": "data/species-seed.partial.json#battus-philenor",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the Americas-level marker deliberately coarse before final seed publication."
     },
     {
       "scientificName": "Gonepteryx rhamni",

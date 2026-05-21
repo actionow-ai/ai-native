@@ -61,13 +61,14 @@
   {
     "scientificName": "Ornithoptera alexandrae",
     "priority": 2,
-    "status": "needs_sensitive_copy_review",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/1937441",
+      "typeLocality": "verified_type_locality_sensitive_coarse: https://www.sbbt.org.uk/conservation/queen-alexandras-birdwing/",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:013602428_Ornithoptera_alexandrae_dorsal_male.jpg",
+      "starterRecord": "data/species-seed.partial.json#ornithoptera-alexandrae"
     },
-    "notes": "保护敏感物种；即使地点证据可靠，公开文案也应避免精确现生种群定位。"
+    "notes": "已加入 starter partial；类型地点按 Biagi/Mambare River headwaters 粗粒度展示，文案必须保持保护敏感物种口径，不能暗示现生种群精确位置。"
   },
   {
     "scientificName": "Heliconius erato",
@@ -84,13 +85,14 @@
   {
     "scientificName": "Battus philenor",
     "priority": 2,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/5141342",
+      "typeLocality": "verified_broad_type_locality: https://ftp.funet.fi/index/Tree_of_life/insecta/lepidoptera/ditrysia/papilionoidea/papilionidae/papilioninae/battus/",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Battus_philenor_02.jpg",
+      "starterRecord": "data/species-seed.partial.json#battus-philenor"
     },
-    "notes": "北美代表；适合补地区多样性，但不能用现代观测点替代命名地点。"
+    "notes": "已加入 starter partial；模式地点只有 America，地图坐标必须保持洲级低精度，不能升级成现代观测点或现生分布中心。"
   },
   {
     "scientificName": "Gonepteryx rhamni",
