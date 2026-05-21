@@ -193,3 +193,15 @@ Seventeenth pass at `2026-05-22 06:55 +0800` while consolidating `origin/agent/b
 - `git diff --check --cached`: passed.
 
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
+
+Nineteenth pass at `2026-05-22 07:05 +0800` after fetching `origin/agent/blue-sky/startup-26dc11c-handoff@97b21a5`:
+
+- `git diff --stat origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/startup-26dc11c-handoff`: confirmed the blue-sky branch only appends 8 lines to this startup evidence document; it does not change startup code, data, scripts, or tests.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
+- `npm start -- --host 127.0.0.1 --port 8173`: exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
+
+Current review target remains `origin/agent/decisive-closer/startup-consolidation`; the direct local preview URL is `http://127.0.0.1:8173/` when the server is already listening, otherwise run `npm install` once and then `npm start`.
