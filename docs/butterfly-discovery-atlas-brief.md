@@ -70,7 +70,9 @@
 
 ## 第一里程碑验收
 
-数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；冻结后的工作不是继续扩物种，而是人工复核、schema/source gate，并从通过项生成正式 `data/species-seed.json` 候选。更细的 Three.js 原型验收门槛见 [`docs/butterfly-globe-prototype-acceptance.md`](butterfly-globe-prototype-acceptance.md)。
+数据 review target 冻结为 `origin/agent/unknown/butterfly-seed-starters-10`。这条分支已有 10 条 source-backed starter partial；冻结后的工作不是继续扩物种，而是人工复核、schema/source gate，并从通过项生成正式 `data/species-seed.json` 候选。
+
+Three.js 原型的细化验收口径见 [`docs/butterfly-globe-prototype-acceptance.md`](butterfly-globe-prototype-acceptance.md)；它应与当前 brief 和 readiness matrix 一起作为唯一 review target，而不是并行评审另一条原型验收分支。
 
 - `data/species-seed.json` 有 10 条物种记录，并能通过 JSON Schema 校验。
 - 每条记录至少有一个地点来源 URL、一个图片来源 URL、license、creator/attribution、地点可信度和中文卡片说明。

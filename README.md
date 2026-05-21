@@ -23,4 +23,4 @@
 
 `preflight`、`candidates` 和 readiness 矩阵只用于加速策展，不是公开地图数据。`data/species-seed.partial.json` 只暂存已经过人工核查的 starter 记录；正式交付仍以至少 10 条记录的 `data/species-seed.json` 为准，并且每条记录必须通过 `data/species-seed.schema.json` 的 `approved` 门槛。
 
-当前 10 条 starter partial 已达到原型前置水位；后续先按 [`docs/butterfly-globe-prototype-acceptance.md`](docs/butterfly-globe-prototype-acceptance.md) 冻结数据评审目标并做 Three.js 原型验收，不继续盲目扩充物种数量。
+当前 10 条 starter partial 已达到原型前置水位；后续以冻结的数据 review target 生成正式 seed 候选，并按 [`docs/butterfly-globe-prototype-acceptance.md`](docs/butterfly-globe-prototype-acceptance.md) 验证 Three.js 首屏故事线、marker 卡片、来源/许可证展示和低精度坐标视觉降级，不继续盲目扩充物种数量。

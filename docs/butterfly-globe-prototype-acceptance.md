@@ -15,22 +15,36 @@
 1. 复核这 10 条 starter 的来源、授权、坐标精度和中文卡片文案。
 2. 从复核通过的 starter 生成正式 `data/species-seed.json`，并用 `data/species-seed.schema.json` 校验。
 
-生成正式 seed 候选时必须保留数据契约：`speciesId` 集合不变，坐标精度不被升格，`discoveryPoint.sourceUrls`、`discoveryPoint.sourceNotes`、`image.sourcePage`、`image.license`、`image.creator` 和 `image.attribution` 字段原样可追溯。
+生成正式 seed 候选时还必须断言：
+
+1. `speciesId` 集合与冻结 partial 保持一致。
+2. `coordinatePrecisionKm` 不能被升格成更精确的值，除非新增可追溯来源。
+3. `discoveryPoint.sourceUrls`、`discoveryPoint.sourceNotes`、`image.sourcePage`、`image.license`、`image.creator` 和 `image.attribution` 字段原样可追溯，或只做有来源的补强。
+4. 低可信或宽泛地点仍以降级展示进入原型，不得伪装成精确采集点。
 
 ## 原型必须证明什么
 
 1. **首屏是一条故事线，不是随机点阵。** 默认镜头先给全球概览，再引导到 2-3 个对比地点：例如 `Ornithoptera alexandrae` 的新几内亚较高精度点、`Parnassius apollo` 的瑞典区域点、`Battus philenor` 的美洲超低精度点。
 2. **marker 点击卡片字段完整。** 卡片至少展示图片、中文名、科学名、命名者/年份、地点标签、地点口径、可信度、坐标精度、来源链接、license、creator/attribution。
-3. **卡片像博物馆标本标签，而不是字段表。** 卡片要把原始描述、type locality 或 original-description locality、图片授权和坐标可信度串成 provenance chain，让评审者看清证据如何支撑这个地图点。
+3. **卡片像博物馆标本标签，而不是字段表。** 卡片要把原始描述、type locality / original-description locality 或同等证据、图片授权和坐标可信度串成一条 provenance chain，让评审者看清证据如何支撑这个地图点。
 4. **低精度坐标必须视觉降级。** `coordinatePrecisionKm` 大于 1000 的记录不能显示成针尖式精确定位；应使用大半径光晕、区域圈或明确的低精度 marker 样式。
 5. **来源和授权在界面中可见。** 每张卡片都要让评审者看到图片能否公开展示，以及地点声明来自哪个 source URL。
 6. **地图可读性要过关。** 10 个点应能在桌面首屏中被区分；卡片图片比例不能撑破布局；marker hover/click 状态不能让地球交互失焦。
 7. **不确定性不能被文案抹平。** 产品文案可以说“发现地球仪”，但卡片必须保留 `type locality` / `original description locality` / 粗粒度替代点的差异。
+
+## Demo Path
+
+验收时录一段 60-90 秒路径，供评审者直接复测：
+
+1. 全球概览：看见 10 个 starter marker 的空间分布和低精度视觉样式。
+2. 对比 2-3 个发现地点：至少包含一个较高精度点、一个区域级点和一个超低精度点。
+3. 点击卡片：展示图片、命名信息、地点口径、证据链接、图片授权和坐标可信度，并能顺着卡片读出 provenance chain。
+4. 关闭卡片并旋转/缩放地球：确认交互没有被 marker 或侧边卡片破坏。
 
 ## 验收检查
 
 - 原型只读取正式 `data/species-seed.json`；如果临时读取 partial，UI 必须标明这是 starter review 数据。
 - `curationStatus != "approved"` 或 `confidence = "low"` 的记录不得进入公开视图。
 - 对 10 条 starter 做一次全量卡片巡检，确认每条至少能打开图片、来源页和图片 source page。
-- 记录一段 60-90 秒 demo path：全球概览 -> 2-3 个发现地点对比 -> 点击卡片看证据、授权和坐标可信度。
 - 记录一张桌面截图和一张窄屏截图，检查 marker、卡片、许可证文本和低精度视觉样式没有遮挡或溢出。
+- 评审对象应是同时包含 brief、readiness matrix、数据冻结口径和本验收文档的同一分支；不要把 10 条 partial 直接改名成正式 seed 交付。
