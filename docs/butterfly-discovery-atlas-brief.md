@@ -40,6 +40,7 @@
 ## 数据源策略
 
 - GBIF Species API：用于校验 accepted taxon、usageKey、科属和作者年份。已用 `Danaus plexippus` 验证 `species/match` 可用。
+- Wikidata P5304：可以作为结构化模式产地候选入口，但只能进入候选池；进入公开 seed 前仍需人工核对分类接受名、命名信息、图片授权和地点来源质量。
 - Wikimedia Commons API：用于找图片 URL、license、creator、source page；实际入库时只接受可展示和可署名的许可。
 - Biodiversity Heritage Library、原始描述文献、Butterflies of America、LepIndex 或同等级分类资料：用于确认 type locality / 原始描述地点。
 - 人工策展记录：每条 seed 数据必须保存 `sourceNotes`，说明为什么这个点可以在地图上展示。

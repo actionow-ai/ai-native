@@ -1,0 +1,170 @@
+[
+  {
+    "scientificName": "Voltinia necaxa",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115639943",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Zihuateutla Municipality",
+      "modernCountryOrRegion": "Mexico",
+      "latitude": 20.3,
+      "longitude": -97.83,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115639943"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Wikidata has a structured type locality with coordinates; still requires accepted-taxon, naming-authority, image-license, and source-quality review before seed promotion."
+  },
+  {
+    "scientificName": "Euselasia misteriosa",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115656978",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "San Jose del Palmar",
+      "modernCountryOrRegion": "Colombia",
+      "latitude": 4.896944444,
+      "longitude": -76.234166666,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115656978"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Wikidata has a structured type locality with coordinates; still requires accepted-taxon, naming-authority, image-license, and source-quality review before seed promotion."
+  },
+  {
+    "scientificName": "Cornuphallus onorbo",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115806363",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Suriname",
+      "modernCountryOrRegion": "Suriname",
+      "latitude": 4.0,
+      "longitude": -56.0,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115806363"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Cigaritis costalis",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q116181927",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Kenya",
+      "modernCountryOrRegion": "Kenya",
+      "latitude": 0.1,
+      "longitude": 38.0,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q116181927"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Cigaritis abri",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q116181579",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Homa Bay County",
+      "modernCountryOrRegion": "Kenya",
+      "latitude": -0.683333,
+      "longitude": 34.45,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q116181579"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Wikidata has a structured type locality with coordinates; still requires accepted-taxon, naming-authority, image-license, and source-quality review before seed promotion."
+  },
+  {
+    "scientificName": "Liptena arnauxi",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115478109",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "latitude": 5.133333333,
+      "longitude": 12.65,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115478109"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Liptena mariae",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115478113",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "latitude": 5.133333333,
+      "longitude": 12.65,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115478113"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Liptena perconfusa",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115478117",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "latitude": 5.133333333,
+      "longitude": 12.65,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115478117"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Liptena restricta",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115478100",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "North Kivu",
+      "modernCountryOrRegion": "Democratic Republic of the Congo",
+      "latitude": -0.55,
+      "longitude": 28.8,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115478100"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Wikidata has a structured type locality with coordinates; still requires accepted-taxon, naming-authority, image-license, and source-quality review before seed promotion."
+  },
+  {
+    "scientificName": "Memphis elisa",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115640548",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "La Concordia Municipality",
+      "modernCountryOrRegion": "Mexico",
+      "latitude": 15.966666666,
+      "longitude": -92.716666666,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115640548"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Wikidata has a structured type locality with coordinates; still requires accepted-taxon, naming-authority, image-license, and source-quality review before seed promotion."
+  },
+  {
+    "scientificName": "Chirgus bocchoris",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q115801710",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Bolivia",
+      "modernCountryOrRegion": "Bolivia",
+      "latitude": -17.056869611,
+      "longitude": -64.991228611,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q115801710"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Country-level coordinates are too coarse for an approved marker unless source notes explicitly justify the reduced precision."
+  },
+  {
+    "scientificName": "Burnsius titicaca",
+    "wikidataItem": "https://www.wikidata.org/wiki/Q116060666",
+    "typeLocality": {
+      "property": "P5304",
+      "label": "Titicaca",
+      "modernCountryOrRegion": "Bolivia / Peru",
+      "latitude": -15.825,
+      "longitude": -69.325,
+      "sourceUrl": "https://www.wikidata.org/wiki/Q116060666"
+    },
+    "status": "needs_authority_image_and_source_review",
+    "notes": "Lake/region-level coordinates need an explicit coordinatePrecisionKm value before this can become an approved seed marker."
+  }
+]
