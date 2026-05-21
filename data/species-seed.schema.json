@@ -1,0 +1,173 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/ai-native/species-seed.schema.json",
+  "title": "Butterfly discovery atlas seed dataset",
+  "type": "array",
+  "minItems": 10,
+  "maxItems": 50,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "speciesId",
+      "scientificName",
+      "taxonAuthority",
+      "gbifUsageKey",
+      "displayNames",
+      "discoveryPoint",
+      "image",
+      "card",
+      "curationStatus"
+    ],
+    "properties": {
+      "speciesId": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      },
+      "scientificName": {
+        "type": "string",
+        "minLength": 3
+      },
+      "taxonAuthority": {
+        "type": "string",
+        "minLength": 3,
+        "description": "例如 Linnaeus, 1758。"
+      },
+      "gbifUsageKey": {
+        "type": ["integer", "null"],
+        "description": "GBIF accepted taxon usageKey；未查实时可先为 null，但 approved 记录必须补齐。"
+      },
+      "displayNames": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["zh", "en"],
+        "properties": {
+          "zh": {
+            "type": ["string", "null"]
+          },
+          "en": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "discoveryPoint": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "basis",
+          "label",
+          "modernCountry",
+          "latitude",
+          "longitude",
+          "coordinatePrecisionKm",
+          "confidence",
+          "year",
+          "sourceUrls",
+          "sourceNotes"
+        ],
+        "properties": {
+          "basis": {
+            "type": "string",
+            "enum": [
+              "type_locality",
+              "original_description_locality",
+              "nomenclatural_act_locality",
+              "curated_surrogate"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 2
+          },
+          "modernCountry": {
+            "type": ["string", "null"]
+          },
+          "latitude": {
+            "type": ["number", "null"],
+            "minimum": -90,
+            "maximum": 90
+          },
+          "longitude": {
+            "type": ["number", "null"],
+            "minimum": -180,
+            "maximum": 180
+          },
+          "coordinatePrecisionKm": {
+            "type": ["number", "null"],
+            "minimum": 0
+          },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low"]
+          },
+          "year": {
+            "type": ["integer", "null"],
+            "minimum": 1500,
+            "maximum": 2100
+          },
+          "sourceUrls": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "format": "uri"
+            }
+          },
+          "sourceNotes": {
+            "type": "string",
+            "minLength": 20
+          }
+        }
+      },
+      "image": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["url", "sourcePage", "license", "creator", "attribution"],
+        "properties": {
+          "url": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "sourcePage": {
+            "type": ["string", "null"],
+            "format": "uri"
+          },
+          "license": {
+            "type": ["string", "null"]
+          },
+          "creator": {
+            "type": ["string", "null"]
+          },
+          "attribution": {
+            "type": ["string", "null"]
+          }
+        }
+      },
+      "card": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["titleZh", "summaryZh", "locationCaptionZh"],
+        "properties": {
+          "titleZh": {
+            "type": "string",
+            "minLength": 2
+          },
+          "summaryZh": {
+            "type": "string",
+            "minLength": 20,
+            "maxLength": 140
+          },
+          "locationCaptionZh": {
+            "type": "string",
+            "minLength": 10,
+            "maxLength": 120
+          }
+        }
+      },
+      "curationStatus": {
+        "type": "string",
+        "enum": ["candidate", "needs_sources", "needs_image_license", "approved", "rejected"]
+      }
+    }
+  }
+}

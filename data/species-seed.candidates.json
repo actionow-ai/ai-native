@@ -1,0 +1,74 @@
+[
+  {
+    "scientificName": "Danaus plexippus",
+    "gbifUsageKey": 5133088,
+    "whyCandidate": "知名度高，适合验证图片授权、命名年份和地点口径；GBIF accepted taxon 已抽样验证。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Papilio machaon",
+    "gbifUsageKey": null,
+    "whyCandidate": "用户熟悉度高，欧亚分布背景适合教育展示；需要确认原始描述地点。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Vanessa cardui",
+    "gbifUsageKey": null,
+    "whyCandidate": "迁徙和全球分布叙事强，但首版只能展示命名/type-locality 点，不展示分布范围。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Vanessa atalanta",
+    "gbifUsageKey": null,
+    "whyCandidate": "常见且图片资源多，适合作为欧洲类群候选。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Morpho menelaus",
+    "gbifUsageKey": null,
+    "whyCandidate": "视觉识别度高，适合首屏吸引力；需要严格核对命名资料和图片授权。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Ornithoptera alexandrae",
+    "gbifUsageKey": null,
+    "whyCandidate": "地理故事强，但保护状态敏感；文案应避免鼓励采集或定位现生种群。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Heliconius erato",
+    "gbifUsageKey": null,
+    "whyCandidate": "新热带类群代表，适合展示大洲多样性。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Battus philenor",
+    "gbifUsageKey": null,
+    "whyCandidate": "北美类群代表，图片和科普资料较易获得。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Gonepteryx rhamni",
+    "gbifUsageKey": null,
+    "whyCandidate": "欧洲经典物种，可补足色彩和形态差异。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Aglais io",
+    "gbifUsageKey": null,
+    "whyCandidate": "醒目眼斑形态适合点击卡片展示。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Iphiclides podalirius",
+    "gbifUsageKey": null,
+    "whyCandidate": "凤蝶类群代表，和 Papilio machaon 可形成形态比较。",
+    "curationStatus": "needs_sources"
+  },
+  {
+    "scientificName": "Parnassius apollo",
+    "gbifUsageKey": null,
+    "whyCandidate": "高山蝴蝶代表，地理叙事强；需要确认地点精度和保护相关文案。",
+    "curationStatus": "needs_sources"
+  }
+]
