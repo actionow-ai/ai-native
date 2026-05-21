@@ -1,0 +1,155 @@
+[
+  {
+    "speciesId": "danaus-plexippus",
+    "scientificName": "Danaus plexippus",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 5133088,
+    "displayNames": {
+      "zh": "黑脉金斑蝶",
+      "en": "Monarch butterfly"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "America septentrionali (North America)",
+      "modernCountry": null,
+      "latitude": 45.0,
+      "longitude": -100.0,
+      "coordinatePrecisionKm": 2500,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3920684",
+        "https://api.gbif.org/v1/species/5133088"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758, page 471, gives the original locality as 'Habitat in America septentrionali'. The plotted point is a deliberately coarse North America centroid, not a specimen occurrence."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/Butterfly_%282963025362%29.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Butterfly_(2963025362).jpg",
+      "license": "CC BY 2.0",
+      "creator": "Ludovic Bertron",
+      "attribution": "Ludovic Bertron, CC BY 2.0, via Wikimedia Commons/Flickr"
+    },
+    "card": {
+      "titleZh": "黑脉金斑蝶",
+      "summaryZh": "黑脉金斑蝶是最容易被公众识别的迁徙蝴蝶之一；这里展示的是林奈命名记录中的粗粒度北美产地口径。",
+      "locationCaptionZh": "原始描述写作 America septentrionali，坐标降级为北美粗略中心点。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "heliconius-erato",
+    "scientificName": "Heliconius erato",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 1900872,
+    "displayNames": {
+      "zh": "红邮差蝶",
+      "en": "Red postman"
+    },
+    "discoveryPoint": {
+      "basis": "type_locality",
+      "label": "Surinam (modern Suriname)",
+      "modernCountry": "Suriname",
+      "latitude": 4.0,
+      "longitude": -56.0,
+      "coordinatePrecisionKm": 350,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://www.butterfliesofamerica.com/L/heliconius_e_erato_types1.htm",
+        "https://www.nhm.ac.uk/our-science/data/lepindex/detail?taxonno=152571",
+        "https://api.gbif.org/v1/species/1900872"
+      ],
+      "sourceNotes": "Butterflies of America lists Heliconius e. erato type material with TL: Surinam; NHM LepIndex confirms the current combination and Linnaean original combination. The point uses a country-level Suriname centroid because the type locality is not more precise."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Botanischer_Garten_-_M%C3%BCnchen_Tropischer_Schmetterling.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Botanischer_Garten_-_M%C3%BCnchen_Tropischer_Schmetterling.jpg",
+      "license": "CC BY 2.0",
+      "creator": "digital cat",
+      "attribution": "digital cat, CC BY 2.0, via Wikimedia Commons/Flickr"
+    },
+    "card": {
+      "titleZh": "红邮差蝶",
+      "summaryZh": "红邮差蝶属于新热带长翼蝶类群，黑红对比强烈；首版地图只展示有模式产地证据的历史地点。",
+      "locationCaptionZh": "Butterflies of America 将模式产地标为 Surinam，坐标按现代苏里南粗粒度展示。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "papilio-machaon",
+    "scientificName": "Papilio machaon",
+    "taxonAuthority": "Linnaeus, 1758",
+    "gbifUsageKey": 8225376,
+    "displayNames": {
+      "zh": "金凤蝶",
+      "en": "Old World swallowtail"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "Europae (Europe)",
+      "modernCountry": null,
+      "latitude": 50.0,
+      "longitude": 10.0,
+      "coordinatePrecisionKm": 2200,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3922436",
+        "https://api.gbif.org/v1/species/8225376"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758, pages 462-463, gives the original locality as 'Habitat in Europae Umbellatis & Ruta'. The plotted point is a coarse Europe centroid, not a specimen occurrence."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Papilio_machaon_-_ComputerHotline_%28by%29.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Papilio_machaon_-_ComputerHotline_(by).jpg",
+      "license": "CC BY 2.0",
+      "creator": "Thomas Bresson",
+      "attribution": "Thomas Bresson, CC BY 2.0, via Wikimedia Commons/Flickr"
+    },
+    "card": {
+      "titleZh": "金凤蝶",
+      "summaryZh": "金凤蝶是欧亚常见的大型凤蝶；首版地图只展示林奈原始命名记录中的宽泛欧洲产地口径。",
+      "locationCaptionZh": "原始描述写作 Europae，坐标降级为欧洲粗略中心点。"
+    },
+    "curationStatus": "approved"
+  },
+  {
+    "speciesId": "morpho-menelaus",
+    "scientificName": "Morpho menelaus",
+    "taxonAuthority": "(Linnaeus, 1758)",
+    "gbifUsageKey": 5133523,
+    "displayNames": {
+      "zh": "蓝闪蝶",
+      "en": "Menelaus blue morpho"
+    },
+    "discoveryPoint": {
+      "basis": "original_description_locality",
+      "label": "America meridionali (South America)",
+      "modernCountry": null,
+      "latitude": -10.0,
+      "longitude": -60.0,
+      "coordinatePrecisionKm": 3000,
+      "confidence": "medium",
+      "year": 1758,
+      "sourceUrls": [
+        "https://zenodo.org/records/3915566",
+        "https://api.gbif.org/v1/species/5133523"
+      ],
+      "sourceNotes": "Zenodo's Plazi treatment of Linnaeus 1758, page 461, gives the original locality as 'Habitat in America meridionali'. The plotted point is a deliberately coarse South America centroid, not a modern occurrence or collection point."
+    },
+    "image": {
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "license": "CC BY-SA 4.0",
+      "creator": "Didier Descouens",
+      "attribution": "Didier Descouens, CC BY-SA 4.0, via Wikimedia Commons"
+    },
+    "card": {
+      "titleZh": "蓝闪蝶",
+      "summaryZh": "蓝闪蝶有强烈金属蓝翼色，适合作为首屏视觉样例；这里仅使用林奈原始描述中的南美宽泛产地。",
+      "locationCaptionZh": "原始描述写作 America meridionali，坐标按南美粗粒度展示。"
+    },
+    "curationStatus": "approved"
+  }
+]

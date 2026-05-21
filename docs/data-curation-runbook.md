@@ -31,4 +31,6 @@
 
 `data/species-image.preflight.json` 记录了首批候选的 GBIF accepted usageKey 和 Commons 图片授权候选，可用于补 `gbifUsageKey` 与 `image` 字段，但不能替代地点来源核查。`data/type-locality-candidates.wikidata.json` 记录了 Wikidata P5304 有结构化地点的候选，可用于扩大后续候选池，但其中记录仍需重新核对 accepted taxon、命名信息、来源质量、图片授权和坐标精度，不能直接提升为 approved seed。
 
+`data/species-seed.partial.json` 只存放已经通过人工来源核查的 starter 记录，用来给后续 10-20 条正式 seed 数据提供字段和证据样例。它不是第一里程碑的完整交付；正式公开数据仍应落在 `data/species-seed.json`，并满足 schema 的最小数量要求。
+
 当前已知风险：快速查询显示 Wikidata 可以辅助名称、图片和外部 ID，但不能稳定给出蝴蝶物种的结构化 type locality。因此不要把“接口查不到地点”理解为无地点，也不要把接口能查到图片理解为授权已经可用。

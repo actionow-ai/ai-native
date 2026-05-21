@@ -2,24 +2,26 @@
   {
     "scientificName": "Danaus plexippus",
     "priority": 1,
-    "status": "needs_type_locality_source",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "sample_checked",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/5133088",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3920684",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Butterfly_(2963025362).jpg",
+      "starterRecord": "data/species-seed.partial.json#danaus-plexippus"
     },
-    "notes": "先作为端到端样例：GBIF usageKey 已抽样验证，但地点和图片授权仍需独立来源。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 North America，地图坐标必须保持低精度，不能升级成具体采集点。"
   },
   {
     "scientificName": "Papilio machaon",
     "priority": 1,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/8225376",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3922436",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Papilio_machaon_-_ComputerHotline_(by).jpg",
+      "starterRecord": "data/species-seed.partial.json#papilio-machaon"
     },
-    "notes": "用户熟悉度高，适合早期演示；优先查 Linnaean 原始命名资料或权威目录。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 Europe，地图坐标必须保持低精度，不能升级成现代观察点。"
   },
   {
     "scientificName": "Vanessa cardui",
@@ -46,13 +48,14 @@
   {
     "scientificName": "Morpho menelaus",
     "priority": 1,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/5133523",
+      "typeLocality": "verified_broad_original_description: https://zenodo.org/records/3915566",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Morpho_menelaus_huebneri_MHNT_Male.jpg",
+      "starterRecord": "data/species-seed.partial.json#morpho-menelaus"
     },
-    "notes": "视觉吸引力强，适合首屏；图片授权和地点来源都不能省略。"
+    "notes": "已加入 starter partial；原始描述地点是宽泛 South America，地图坐标必须保持低精度，不能升级成现代分布点。"
   },
   {
     "scientificName": "Ornithoptera alexandrae",
@@ -68,13 +71,14 @@
   {
     "scientificName": "Heliconius erato",
     "priority": 2,
-    "status": "needs_all_sources",
+    "status": "starter_record_added",
     "evidence": {
-      "gbifAcceptedTaxon": "missing",
-      "typeLocality": "missing",
-      "imageLicense": "missing"
+      "gbifAcceptedTaxon": "verified: https://api.gbif.org/v1/species/1900872",
+      "typeLocality": "verified_type_locality: https://www.butterfliesofamerica.com/L/heliconius_e_erato_types1.htm",
+      "imageLicense": "verified_commons: https://commons.wikimedia.org/wiki/File:Botanischer_Garten_-_M%C3%BCnchen_Tropischer_Schmetterling.jpg",
+      "starterRecord": "data/species-seed.partial.json#heliconius-erato"
     },
-    "notes": "新热带代表；先查分类目录和原始描述地点，再定坐标精度。"
+    "notes": "已加入 starter partial；type locality 只到 Surinam/Suriname，坐标按国家级粗粒度展示。"
   },
   {
     "scientificName": "Battus philenor",
