@@ -6,6 +6,9 @@
 
 - 分支: `agent/decisive-closer/startup-consolidation`
 - 上游原型基线: `agent/pragmatic-engineer/browsable-butterfly-globe`
+- 启动交接来源: `agent/decisive-closer/startup-verify`
+- 端口复用来源: `agent/blue-sky/startup-port-reuse`
+- 当前收口评审目标: `agent/decisive-closer/startup-consolidation`
 - 原型入口: `index.html`
 - 数据入口: `data/species-seed.json`
 - 启动脚本: `scripts/serve.mjs`
