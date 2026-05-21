@@ -5,9 +5,9 @@
 - `origin/agent/product-visionary/butterfly-queue-review`：主线队列和已收紧的 `approved` schema。
 - `origin/agent/unknown/butterfly-seed-preflight`：12 个候选物种的 GBIF accepted taxon 和 Commons 图片授权预检。
 - `origin/agent/unknown/wikidata-type-locality-candidates`：12 个带 Wikidata P5304 结构化模式产地的候选。
-- `origin/agent/unknown/butterfly-seed-starters-more`：4 条已经人工补齐来源、图片授权和粗粒度坐标的 starter partial。
+- `origin/agent/unknown/butterfly-seed-starters-8`：8 条已经人工补齐来源、图片授权和粗粒度坐标的 starter partial。
 
-关键结论：现在有 4 条可继续保留在 partial 里的 starter 记录，但还没有完整 `data/species-seed.json`。主线 12 个常见/展示友好物种里，`Danaus plexippus`、`Heliconius erato`、`Papilio machaon` 和 `Morpho menelaus` 已补到 starter 水位；其余主线物种仍缺 type locality 或原始描述地点来源。P5304 候选有地点线索，但缺 accepted taxon、图片授权、命名来源核对和坐标精度复核。
+关键结论：现在有 8 条可继续保留在 partial 里的 starter 记录，但还没有完整 `data/species-seed.json`。主线 12 个常见/展示友好物种里，`Danaus plexippus`、`Heliconius erato`、`Papilio machaon`、`Morpho menelaus`、`Vanessa cardui`、`Gonepteryx rhamni`、`Iphiclides podalirius` 和 `Parnassius apollo` 已补到 starter 水位；其余主线物种仍缺 type locality 或原始描述地点来源。P5304 候选有地点线索，但缺 accepted taxon、图片授权、命名来源核对和坐标精度复核。
 
 后续补 seed 时建议按这个顺序做：
 
