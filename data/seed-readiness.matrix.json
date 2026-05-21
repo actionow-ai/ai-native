@@ -1,0 +1,286 @@
+{
+  "purpose": "Bridge the seed queue, image preflight, Wikidata P5304 locality candidates, and starter partial without confusing starter records with the final milestone seed dataset.",
+  "promotionRule": "A row can move to data/species-seed.partial.json as an item-level approved starter only after GBIF accepted taxon evidence, type locality or original-description locality evidence, image license evidence, coordinate precision, and confidence are all present. The milestone data/species-seed.json is not ready until at least 10 starter rows pass the schema gate.",
+  "sourceBranches": {
+    "baseQueueAndSchema": "origin/agent/product-visionary/butterfly-queue-review",
+    "imagePreflight": "origin/agent/unknown/butterfly-seed-preflight",
+    "wikidataTypeLocalityCandidates": "origin/agent/unknown/wikidata-type-locality-candidates",
+    "starterPartial": "origin/agent/unknown/butterfly-seed-starters"
+  },
+  "summary": {
+    "queueSpeciesWithTaxonAndImagePreflight": 12,
+    "queueSpeciesWithTypeLocalityEvidence": 2,
+    "starterPartialRows": 2,
+    "wikidataRowsWithTypeLocalityCandidate": 12,
+    "wikidataRowsWithTaxonAndImagePreflight": 0,
+    "approvedSeedRows": 0
+  },
+  "rows": [
+    {
+      "scientificName": "Danaus plexippus",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
+      "queuePriority": 1,
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_broad_original_description",
+      "starterRecord": "data/species-seed.partial.json#danaus-plexippus",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the deliberately coarse North America marker and continue adding starter rows until the final seed dataset reaches at least 10 records."
+    },
+    {
+      "scientificName": "Papilio machaon",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 1,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a Linnaean original-description or catalog source for locality; do not use a modern observation point."
+    },
+    {
+      "scientificName": "Vanessa cardui",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 1,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a nomenclatural locality source; migration range is not acceptable discovery-place evidence."
+    },
+    {
+      "scientificName": "Vanessa atalanta",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 2,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Morpho menelaus",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 1,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Ornithoptera alexandrae",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 2,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_and_sensitive_copy_review",
+      "nextAction": "Find historical locality evidence and keep public marker precision intentionally coarse because this is a protected-species candidate."
+    },
+    {
+      "scientificName": "Heliconius erato",
+      "sourceSet": "priority_seed_queue_and_starter_partial",
+      "queuePriority": 2,
+      "gbifEvidence": "verified_in_starter",
+      "imageEvidence": "verified_in_starter",
+      "localityEvidence": "verified_type_locality",
+      "starterRecord": "data/species-seed.partial.json#heliconius-erato",
+      "readiness": "starter_partial_ready_not_final_seed",
+      "nextAction": "Keep the Suriname country-level marker coarse and continue adding starter rows until the final seed dataset reaches at least 10 records."
+    },
+    {
+      "scientificName": "Battus philenor",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 2,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Gonepteryx rhamni",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 3,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Aglais io",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 3,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Iphiclides podalirius",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 3,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_or_original_description",
+      "nextAction": "Find a type locality or original-description locality source before assembling an approved seed row."
+    },
+    {
+      "scientificName": "Parnassius apollo",
+      "sourceSet": "priority_seed_queue",
+      "queuePriority": 2,
+      "gbifEvidence": "preflight_available",
+      "imageEvidence": "preflight_available",
+      "localityEvidence": "missing",
+      "readiness": "blocked_on_type_locality_and_sensitive_copy_review",
+      "nextAction": "Find historical locality evidence and prefer low-precision public marker copy for this protected-species candidate."
+    },
+    {
+      "scientificName": "Voltinia necaxa",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Zihuateutla Municipality",
+      "modernCountryOrRegion": "Mexico",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "locality_level_candidate",
+      "readiness": "blocked_on_taxon_image_and_source_review",
+      "nextAction": "Verify accepted taxon, naming authority, original source behind P5304, Commons/GBIF image license, and coordinate precision."
+    },
+    {
+      "scientificName": "Euselasia misteriosa",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "San Jose del Palmar",
+      "modernCountryOrRegion": "Colombia",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "locality_level_candidate",
+      "readiness": "blocked_on_taxon_image_and_source_review",
+      "nextAction": "Verify accepted taxon, naming authority, original source behind P5304, Commons/GBIF image license, and coordinate precision."
+    },
+    {
+      "scientificName": "Cornuphallus onorbo",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Suriname",
+      "modernCountryOrRegion": "Suriname",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Cigaritis costalis",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Kenya",
+      "modernCountryOrRegion": "Kenya",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Cigaritis abri",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Homa Bay County",
+      "modernCountryOrRegion": "Kenya",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "county_level_candidate",
+      "readiness": "blocked_on_taxon_image_and_source_review",
+      "nextAction": "Verify accepted taxon, naming authority, original source behind P5304, Commons/GBIF image license, and coordinate precision."
+    },
+    {
+      "scientificName": "Liptena arnauxi",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Liptena mariae",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Liptena perconfusa",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Cameroon",
+      "modernCountryOrRegion": "Cameroon",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Liptena restricta",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "North Kivu",
+      "modernCountryOrRegion": "Democratic Republic of the Congo",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "regional_candidate",
+      "readiness": "blocked_on_taxon_image_and_source_review",
+      "nextAction": "Verify accepted taxon, naming authority, original source behind P5304, Commons/GBIF image license, and coordinate precision."
+    },
+    {
+      "scientificName": "Memphis elisa",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "La Concordia Municipality",
+      "modernCountryOrRegion": "Mexico",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "locality_level_candidate",
+      "readiness": "blocked_on_taxon_image_and_source_review",
+      "nextAction": "Verify accepted taxon, naming authority, original source behind P5304, Commons/GBIF image license, and coordinate precision."
+    },
+    {
+      "scientificName": "Chirgus bocchoris",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Bolivia",
+      "modernCountryOrRegion": "Bolivia",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "country_level_too_coarse",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Treat country-level coordinates as too coarse unless the source explicitly justifies reduced precision."
+    },
+    {
+      "scientificName": "Burnsius titicaca",
+      "sourceSet": "wikidata_p5304_candidates",
+      "typeLocalityLabel": "Titicaca",
+      "modernCountryOrRegion": "Bolivia / Peru",
+      "gbifEvidence": "missing",
+      "imageEvidence": "missing",
+      "localityEvidence": "wikidata_structured_candidate",
+      "coordinatePrecisionReview": "lake_or_region_level_requires_precision_km",
+      "readiness": "blocked_on_taxon_image_source_and_precision_review",
+      "nextAction": "Add explicit coordinatePrecisionKm before this can become a public marker candidate."
+    }
+  ]
+}
