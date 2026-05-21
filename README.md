@@ -1,28 +1,103 @@
 # ai-native
 
-This repository is currently an empty project shell. The first useful step is
-to make the project intent explicit enough that agents and humans can work
-without guessing.
+`ai-native` is an agent coordination runtime for agent operators. Its first
+job is to make asynchronous agent work legible: resume context, choose one
+bounded next action, and publish a traceable artifact that peers and humans can
+review.
 
-## Intake
+## First User
 
-Open questions to settle before implementation:
+The first user is an agent operator stewarding a project with multiple agents
+that wake, read shared context, and contribute without constant human prompting.
+The operator needs to know what changed, where the team is converging, which
+blockers remain, and whether the next agent action is narrow enough to trust.
 
-- What problem should this repository solve first?
-- Who is the first user or operator?
-- What is the smallest demo that would prove the direction?
-- Which runtime, framework, and deployment target should be assumed?
-- What should be out of scope for the first pass?
+## Product Wedge
 
-## Suggested First Artifact
+Default the project to coordination infrastructure, not an app scaffold,
+customer-facing product, or eval workspace. The smallest useful proof is a
+manual or scheduled wake that:
 
-Create a short product and technical brief with:
+1. reads project context,
+2. selects one bounded next action,
+3. leaves a reviewable artifact/status trail.
 
-- a one-paragraph mission statement
-- three concrete user workflows
-- the first milestone's acceptance criteria
-- a proposed stack and repository layout
-- known constraints, integrations, and non-goals
+## Core Workflows
 
-Once that brief exists, implementation work can start on a branch with tests
-and a narrower scope.
+1. **Resume and triage**: an agent reads recent chat, goals, plans, and repo
+   state, then decides whether to stay silent, post a decision, update a plan,
+   or create a small branch artifact.
+2. **Coordinate bounded work**: an agent claims or advances one narrow plan
+   step, checks nearby work to avoid duplication, works on a branch, and keeps
+   plan status current.
+3. **Publish traceable artifacts**: an agent posts the branch, commit, or
+   decision it produced, with the source goal, acceptance criteria, and
+   remaining risk visible.
+
+## First Milestone Acceptance
+
+The first milestone is successful when a scheduled or manual wake can produce a
+complete coordination trace:
+
+- source context: recent chat, goals, plans, and repo state read before action
+- decision: explicit reason for acting or staying silent
+- bounded action: one chat post, one plan update, or one branch commit
+- artifact: reviewable output linked back to the source goal or plan
+- status: project-visible note that says what changed and what remains
+
+The milestone should not require a UI, generic app scaffold, multi-agent task
+planner, or evaluation suite. Those only become useful after the coordination
+trace is reliable.
+
+## Technical Direction
+
+Start with the contract before the product surface:
+
+- **Runtime core**: TypeScript/Node.js library for context snapshots, decision
+  traces, and artifact records.
+- **Provider adapter**: first adapter targets team-context chat/goals/plans and
+  git branch state.
+- **Operator surface**: begin with CLI/readable markdown output; add a web
+  console only after the trace shape is stable.
+- **Persistence**: file-backed JSON or SQLite for local prototypes; defer hosted
+  storage until the first trace format holds up.
+
+Suggested repository layout once implementation starts:
+
+```text
+docs/
+  decisions/
+packages/
+  runtime/
+  adapters/team-context/
+apps/
+  operator-cli/
+examples/
+  wake-trace/
+```
+
+## Constraints
+
+- Work must happen on branches; main should stay protected until there is an
+  accepted brief and first implementation slice.
+- Every agent action needs provenance: what context was read, why this action
+  was chosen, and where the artifact landed.
+- Human override stays explicit. The runtime can recommend and execute bounded
+  actions, but it must make veto points visible.
+- Team-context is the first integration boundary; avoid premature provider
+  abstraction until one adapter works end to end.
+
+## Non-goals
+
+- Generic AI app generator.
+- Customer-facing SaaS application.
+- Broad eval framework or benchmark suite.
+- Autonomous long-running implementation without bounded plan steps.
+- Polished web dashboard before the trace contract is proven.
+
+## Open Decisions
+
+- Is the first executable slice a CLI command that prints a wake trace, or a
+  library function with fixture-based tests?
+- Should the first persisted trace live in repo-local files, team-context memory,
+  or both?
