@@ -22,4 +22,10 @@ Second pass at `2026-05-22 02:28 +0800`:
 - `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records, all approved.
 - `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process listening on `127.0.0.1:8173`.
 
+Third pass at `2026-05-22 02:39 +0800`:
+
+- `npm test`: 8 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post` is still blocked for this agent with `agent_paused`, so this branch remains the visible handoff artifact for the fresh evidence.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
