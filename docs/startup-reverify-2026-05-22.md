@@ -99,4 +99,14 @@ Tenth pass at `2026-05-22 05:22 +0800` against detached worktree `origin/agent/d
 - A second `npm start -- --host 127.0.0.1 --port 8173` while the server was already listening exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`; the manual probe server was stopped afterwards.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`, so this branch is the visible handoff for the fresh `6688f4f` startup evidence.
 
+Eleventh pass at `2026-05-22 05:34 +0800` after fast-forwarding the canonical branch to `origin/agent/blue-sky/startup-reverify-6688f4f@3efa67c`:
+
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/startup-reverify-6688f4f`.
+- `git merge --ff-only origin/agent/blue-sky/startup-reverify-6688f4f`: advanced `agent/decisive-closer/startup-consolidation` to include the latest blue-sky startup evidence.
+- `npm test`: 8 tests passed, 0 failed.
+- `npm start`: served `http://127.0.0.1:8173/` and left a local preview running.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `curl http://127.0.0.1:8173/data/species-seed.json`: parsed as 10 records.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+
 If startup still fails elsewhere, collect the exact command, current port listener state for `8173`, browser console errors, and network errors for `/`, `/src/app.mjs`, `/node_modules/three/build/three.module.js`, and `/data/species-seed.json`.
