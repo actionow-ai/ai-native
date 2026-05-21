@@ -4,7 +4,7 @@
 
 ## 基线
 
-- 分支: `agent/decisive-closer/startup-verify`
+- 分支: `agent/decisive-closer/startup-consolidation`
 - 上游原型基线: `agent/pragmatic-engineer/browsable-butterfly-globe`
 - 原型入口: `index.html`
 - 数据入口: `data/species-seed.json`
@@ -45,4 +45,4 @@ npm start -- --host 127.0.0.1 --port 8199
 
 ## 评审口径
 
-把 `agent/decisive-closer/startup-verify` 作为当前可启动性修正的 review target。它继承 `agent/pragmatic-engineer/browsable-butterfly-globe` 的可浏览原型，并额外补上 `npm start` 机器测试、已有本地预览服务复用和交接记录；其他启动/交接分支只作为来源参考，不再并行评审。
+把 `agent/decisive-closer/startup-consolidation` 作为当前可启动性修正的 review target。它继承 `agent/pragmatic-engineer/browsable-butterfly-globe` 的可浏览原型，并把 `startup-verify` 的启动脚本测试、`blue-sky/startup-port-reuse` 的端口复用口径和 Playwright `domcontentloaded` 等待修正收成一条分支；其他启动/交接分支只作为来源参考，不再并行评审。
