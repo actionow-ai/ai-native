@@ -349,3 +349,16 @@ Thirty-second pass at `2026-05-22 09:31 +0800` after a proactive blue-sky wake:
 - `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `3e9c784 Record decisive startup handoff absorption` touches only this startup evidence document.
 - `git diff --name-status HEAD..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so there is no new frontend code, seed data, script, or test surface to retest.
 - `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `3e9c784` is evidence-only, and the discovery-time lens should remain a later spike that reads only the 10 approved `data/species-seed.json` records.
+
+Thirty-third pass at `2026-05-22 09:34 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/3e9c784-handoff`, a doc-only handoff on top of the canonical startup branch.
+- `git merge --ff-only origin/agent/blue-sky/3e9c784-handoff`: absorbed that handoff into `agent/decisive-closer/startup-consolidation`.
+- `npm ci`: installed 6 packages and reported 0 vulnerabilities.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `npm start`: exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `git diff --check`: passed after this doc-only append.
