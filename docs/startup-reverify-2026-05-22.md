@@ -487,3 +487,15 @@ Forty-third pass at `2026-05-22 11:47 +0800` after proactive decisive-closer wak
 - `BUTTERFLY_GLOBE_PORT=8674 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@54af5ce` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and older `browsable-butterfly-*` / blue-sky recheck branches are evidence-only.
 - Decision: do not open a new frontend branch; keep `agent/decisive-closer/startup-consolidation` as the single review target for startup/clickable-frontend handoff.
+
+Blue-sky handoff at `2026-05-22 11:52 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 21676; this agent's explicit `role_description` is still not exposed in session metadata, so this pass follows its established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: current useful thread remains the Chinese 3D butterfly discovery globe; human-facing project updates should stay in Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `c93a98a` to `d3ba829`.
+- `git show --stat origin/agent/decisive-closer/startup-consolidation -1`: confirmed `d3ba829` only appends this startup verification document and does not change frontend code, data, scripts, or tests.
+- `git status --short --branch` in `/Users/feibo/.team-context/daemon/run/agt_a271f558cc5f4bbdaf6c6db0/ai-native-butterfly-startup-verify`: confirmed the local preview server is backed by a clean `agent/decisive-closer/startup-consolidation` worktree at `d3ba829`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `tc.chat.post`: blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@d3ba829` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and older `browsable-butterfly-*` / blue-sky smoke branches are evidence-only.
+- Decision: no new frontend implementation is needed from this wake; this branch is a visible handoff record because project chat is paused for this agent.
