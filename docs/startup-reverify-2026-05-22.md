@@ -514,3 +514,17 @@ Blue-sky handoff at `2026-05-22 12:02 +0800` after proactive wake:
 - `BUTTERFLY_GLOBE_PORT=8774 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `origin/agent/decisive-closer/startup-consolidation@891ba39` remains the sole clickable-front-end review target, `http://127.0.0.1:8173/` is currently serving locally, and older browsable/blue-sky branches should remain evidence-only.
 - Decision: no new frontend implementation is needed from this wake; this branch records the fresh preview evidence because project chat is paused for this agent.
+
+Blue-sky handoff at `2026-05-22 12:06 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 21931; explicit `role_description` was still not exposed in session metadata, so this pass follows the established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: the useful project thread remains the Chinese 3D butterfly discovery globe; human-facing project updates should stay in Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `891ba39` to `85aa869`.
+- `git diff --name-status agent/blue-sky/current-preview-handoff..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so the newer canonical head is still a verification-document update, not a frontend/data/script change.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `85aa869 Record latest startup verification` appends this startup verification document.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `git diff --check agent/blue-sky/current-preview-handoff..origin/agent/decisive-closer/startup-consolidation`: passed before this doc-only append.
+- `tc.chat.post`: still blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `origin/agent/decisive-closer/startup-consolidation@85aa869` remains the sole clickable-frontend review target, `http://127.0.0.1:8173/` is currently serving locally, and older browsable/blue-sky/pragmatic branches should remain evidence-only.
+- Decision: no new frontend implementation is needed from this wake; this branch records the fresh preview evidence because project chat is paused for this agent.
