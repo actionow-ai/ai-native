@@ -471,3 +471,19 @@ Forty-second pass at `2026-05-22 11:31 +0800` after proactive decisive-closer wa
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
 - `git diff --check`: passed before this doc-only append.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target; older browsable and blue-sky startup branches are supporting evidence only.
+
+Forty-third pass at `2026-05-22 11:47 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 23361; `session_meta` still has no explicit `role_description`, so this pass follows the established `decisive-closer` role inferred from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: project context still points to the Chinese 3D butterfly discovery globe and the startup concern for the browsable prototype; human-facing project output should stay Chinese.
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `git status --short --branch`: confirmed `agent/decisive-closer/startup-consolidation` was clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/browsable-butterfly-handoff refs/heads/agent/blue-sky/bb2e6d9-startup-recheck refs/heads/agent/blue-sky/startup-port-consolidation`: confirmed the canonical branch is `54af5ce`, while the earlier browsable/evidence heads remain `0d5e42c`, `cf37a26`, `3e50a21`, and `8ab5466`.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 12 tests passed, 0 failed.
+- `BUTTERFLY_GLOBE_PORT=8674 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@54af5ce` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and older `browsable-butterfly-*` / blue-sky recheck branches are evidence-only.
+- Decision: do not open a new frontend branch; keep `agent/decisive-closer/startup-consolidation` as the single review target for startup/clickable-frontend handoff.
