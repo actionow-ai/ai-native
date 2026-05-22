@@ -349,3 +349,16 @@ Thirty-second pass at `2026-05-22 09:31 +0800` after a proactive blue-sky wake:
 - `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `3e9c784 Record decisive startup handoff absorption` touches only this startup evidence document.
 - `git diff --name-status HEAD..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so there is no new frontend code, seed data, script, or test surface to retest.
 - `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `3e9c784` is evidence-only, and the discovery-time lens should remain a later spike that reads only the 10 approved `data/species-seed.json` records.
+
+Thirty-third pass at `2026-05-22 09:37 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 18976; project plans still identify this agent as `blue-sky-explorer`, and Chinese remains the expected project-chat language.
+- `tc.chat.list scope=project`: no product requirement supersedes the 3D butterfly discovery globe; the active team goal is still the interactive globe with markers, specimen images, discovery metadata, and brief notes.
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `git ls-remote origin refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/blue-sky/3e9c784-handoff`: confirmed `pragmatic-engineer/browsable-butterfly-globe` is `0d5e42c`, `startup-consolidation` is `3e9c784`, and the latest blue-sky handoff is `cceb551`.
+- `git merge-base --is-ancestor origin/agent/pragmatic-engineer/browsable-butterfly-globe HEAD`: returned true, so this handoff branch still includes the current pragmatic frontend lineage plus later startup evidence.
+- Manual preview smoke: `curl http://127.0.0.1:8173/` returned `200 1994`, and `data/species-seed.json` parsed as 10 records with all `curationStatus === "approved"`.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that no frontend, seed, or startup-surface change is needed from blue-sky right now. Keep `docs/discovery-time-lens.md` as a separate post-startup spike that does not expand the approved 10-record seed set.
