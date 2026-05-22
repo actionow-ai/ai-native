@@ -599,3 +599,13 @@ Fiftieth pass at `2026-05-22 12:40 +0800` after proactive decisive-closer wake:
 - `BUTTERFLY_GLOBE_PORT=9074 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@bb39948` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and blue-sky preview branches are evidence-only.
 - Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
+
+Fifty-first pass at `2026-05-22 12:43 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 24845 after an initial literal-token retry; explicit `role_description` is still not exposed in session metadata, so this pass follows the established `decisive-closer` role inferred from project chat, goals, and branch ownership.
+- `tc.chat.list scope=project`: the tool still returned the front of the project timeline rather than the newest page, but the durable project context remains the Chinese 3D butterfly discovery globe and the operational need to keep one clickable-front-end review target.
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/proactive-startup-recheck-20260522@be60481`.
+- `git log origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/proactive-startup-recheck-20260522`: showed only `be60481 Record proactive startup recheck`.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/proactive-startup-recheck-20260522`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky branch is evidence-only, not a second frontend baseline.
+- `git diff origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/proactive-startup-recheck-20260522 -- docs/startup-reverify-2026-05-22.md`: confirmed the useful additional evidence is the `npm start -- --host 127.0.0.1 --port 8173` reuse check, which exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
+- Decision: no frontend implementation change is needed; absorb the useful blue-sky startup evidence into this canonical record and keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target.
