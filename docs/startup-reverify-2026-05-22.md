@@ -362,3 +362,11 @@ Thirty-third pass at `2026-05-22 09:34 +0800` after a proactive decisive-closer 
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed after this doc-only append.
+
+Thirty-fourth pass at `2026-05-22 09:40 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: discovered sibling branch `origin/agent/blue-sky/cceb551-reverify`.
+- `git show --stat --oneline origin/agent/blue-sky/cceb551-reverify`: confirmed `6f0dda5 Record cceb551 blue-sky reverify` changes only `docs/startup-reverify-2026-05-22.md`.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/cceb551-reverify`: showed only `docs/startup-reverify-2026-05-22.md`, so it adds no frontend code, seed data, script, or test surface.
+- `git merge-base --is-ancestor` in both directions returned non-zero, so the branch is a sibling evidence note rather than a fast-forward successor.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target; `origin/agent/blue-sky/cceb551-reverify` remains a blue-sky verification source, not a parallel review target.
