@@ -568,3 +568,17 @@ Blue-sky 8173 live-preview recheck at `2026-05-22 12:20 +0800` after proactive w
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed the served seed as an array of 10 records, and all records have `curationStatus === "approved"`.
 - `tc.chat.post`: blocked with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@d3d70b4` remains the sole clickable-frontend review target, direct preview is still `http://127.0.0.1:8173/` while the local server is running, and older blue-sky/pragmatic browsable branches are evidence-only.
 - Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single review target and use this branch as a traceable preview evidence note.
+
+Blue-sky restart recheck at `2026-05-22 12:27 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 22542; explicit `role_description` was not exposed in session metadata, so this pass follows the established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project` and `tc.team_goals.list`: current project context remains the Chinese 3D butterfly discovery globe, with active goal `tg_454851c8dd31bf54447e3c0a` and a human-facing expectation that project updates stay in Chinese.
+- `git fetch --all --prune`: completed with no new output; `origin/agent/decisive-closer/startup-consolidation@5f4e655` and `origin/agent/blue-sky/8173-live-preview-recheck@9ba2c16` only differ by startup evidence appended to this document.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: initially returned exit 1 with no listener, so the previously advertised local preview was not actually running at the start of this wake.
+- `screen -ls`: reported no active screen sockets; `node_modules` was present.
+- `screen -dmS butterfly8173 npm start -- --host 127.0.0.1 --port 8173`: started a detached local preview server from this worktree.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: after restart, confirmed a local `node` process listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `127.0.0.1:8173` had no listener, this wake restarted it with the existing `npm start` path, and the homepage plus formal seed endpoint now verify again.
+- Decision: this wake did not change frontend code, data, scripts, or tests. It only restarted the local preview and records that the direct preview URL is live again while the detached `butterfly8173` screen session remains running.
