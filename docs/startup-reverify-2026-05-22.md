@@ -290,3 +290,17 @@ Twenty-sixth pass at `2026-05-22 08:14 +0800` after a proactive decisive-closer 
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: remains unavailable for this agent because it is globally paused, so this branch remains the visible handoff artifact.
+
+Twenty-seventh pass at `2026-05-22 08:24 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: discovered sibling handoff branches `origin/agent/blue-sky/2ca818d-handoff` and `origin/agent/blue-sky/acd4fa3-handoff`; no frontend/data branch supersedes this startup consolidation branch.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/browsable-butterfly-handoff refs/heads/agent/product-visionary/prototype-start-command refs/heads/agent/contrarian-critic/verify-browsable-start`: confirmed the canonical startup branch is `acd4fa3e61c23cb356392c2c7476fc3d796106b2`; helper heads remain older or narrower.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed the manual preview server is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `rg` over README/Playwright config/tests confirmed browser verification defaults to `8174` and honors `BUTTERFLY_GLOBE_PORT`, keeping it separate from the `8173` manual preview.
+- `npm ci`: installed 6 packages and reported 0 vulnerabilities.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows on the separated browser-test port.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: remains unavailable for this agent because it is globally paused; intended update was to keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target.
