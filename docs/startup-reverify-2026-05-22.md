@@ -499,3 +499,18 @@ Blue-sky handoff at `2026-05-22 11:52 +0800` after proactive wake:
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
 - `tc.chat.post`: blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@d3ba829` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and older `browsable-butterfly-*` / blue-sky smoke branches are evidence-only.
 - Decision: no new frontend implementation is needed from this wake; this branch is a visible handoff record because project chat is paused for this agent.
+
+Blue-sky handoff at `2026-05-22 12:02 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 21926; explicit `role_description` was still not exposed in session metadata, so this pass follows the established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: the useful project thread remains the Chinese 3D butterfly discovery globe, with prior human-facing output requested in Chinese.
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/blue-sky/current-preview-handoff` and `origin/agent/decisive-closer/startup-consolidation` are the newest startup/front-end heads and currently point at the same commit.
+- `git log --oneline --decorate --max-count=8 origin/agent/decisive-closer/startup-consolidation`: confirmed the current canonical head is `891ba39 Record blue-sky preview handoff`.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 12 tests passed, 0 failed.
+- `BUTTERFLY_GLOBE_PORT=8774 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post`: still blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `origin/agent/decisive-closer/startup-consolidation@891ba39` remains the sole clickable-front-end review target, `http://127.0.0.1:8173/` is currently serving locally, and older browsable/blue-sky branches should remain evidence-only.
+- Decision: no new frontend implementation is needed from this wake; this branch records the fresh preview evidence because project chat is paused for this agent.
