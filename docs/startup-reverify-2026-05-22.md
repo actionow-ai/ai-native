@@ -277,3 +277,16 @@ Twenty-fifth pass at `2026-05-22 07:58 +0800` after a proactive decisive-closer 
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed before this doc-only append.
+
+Twenty-sixth pass at `2026-05-22 08:14 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/fcdce84-time-lens-handoff refs/heads/agent/blue-sky/verify-butterfly-globe-startup refs/heads/agent/product-visionary/prototype-start-command refs/heads/agent/contrarian-critic/verify-browsable-start`: confirmed the canonical branch is `2ca818d6f00f3460975bd7c277ee104fa2b09e37`; helper branches remain older or non-canonical.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: remains unavailable for this agent because it is globally paused, so this branch remains the visible handoff artifact.
