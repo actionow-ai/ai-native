@@ -41,7 +41,7 @@
 npm start
 ```
 
-然后打开 `http://localhost:8173/`。
+然后打开命令行打印出的 URL。默认会优先使用 `http://127.0.0.1:8173/`；如果这个端口已经被占用，`npm start` 会自动改用一个空闲端口并打印新的 URL。需要固定端口时可运行 `npm start -- --port 8174`。
 
 如果不想使用 npm，也可以运行 `python3 -m http.server 8173` 预览同一个静态原型。
 

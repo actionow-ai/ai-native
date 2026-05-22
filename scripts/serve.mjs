@@ -5,7 +5,7 @@ import { extname, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
-const { host, port } = parseArgs(process.argv.slice(2));
+const { host, port, portExplicit } = parseArgs(process.argv.slice(2));
 
 const server = createServer(async (request, response) => {
   try {
@@ -34,7 +34,15 @@ const server = createServer(async (request, response) => {
   }
 });
 
+let retriedDefaultPort = false;
+
 server.on("error", (error) => {
+  if (error?.code === "EADDRINUSE" && !portExplicit && port !== 0 && !retriedDefaultPort) {
+    retriedDefaultPort = true;
+    console.warn(`Default preview port ${port} is busy; retrying on a free port.`);
+    server.listen(0, host);
+    return;
+  }
   console.error(`Failed to start preview server: ${error.message}`);
   process.exitCode = 1;
 });
@@ -52,7 +60,7 @@ for (const signal of ["SIGINT", "SIGTERM"]) {
 }
 
 function parseArgs(args) {
-  const options = { host: "127.0.0.1", port: 8173 };
+  const options = { host: "127.0.0.1", port: 8173, portExplicit: false };
 
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];
@@ -66,11 +74,13 @@ function parseArgs(args) {
       continue;
     }
     if (arg === "--port") {
+      options.portExplicit = true;
       options.port = Number(args[index + 1]);
       index += 1;
       continue;
     }
     if (arg.startsWith("--port=")) {
+      options.portExplicit = true;
       options.port = Number(arg.slice("--port=".length));
     }
   }

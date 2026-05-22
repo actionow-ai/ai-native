@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
+import { createServer } from "node:net";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
@@ -21,6 +22,25 @@ test("npm start serves the prototype and formal seed data", async (t) => {
   const seed = JSON.parse(await readText(new URL("/data/species-seed.json", serverUrl)));
   assert.equal(seed.length, 10);
   assert.equal(seed.every((record) => record.curationStatus === "approved"), true);
+});
+
+test("npm start falls back when the default preview port is busy", async (t) => {
+  const blocker = await occupyPort(8173);
+  if (blocker) t.after(() => blocker.close());
+
+  const server = spawn("npm", ["start"], {
+    cwd: repoRoot,
+    detached: process.platform !== "win32",
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  t.after(() => stopServer(server));
+
+  const serverUrl = await waitForServerUrl(server);
+  assert.notEqual(serverUrl.port, "8173");
+
+  const seed = JSON.parse(await readText(new URL("/data/species-seed.json", serverUrl)));
+  assert.equal(seed.length, 10);
 });
 
 function waitForServerUrl(server) {
@@ -54,6 +74,20 @@ function waitForServerUrl(server) {
     server.stdout.on("data", onData);
     server.stderr.on("data", onData);
     server.on("exit", onExit);
+  });
+}
+
+function occupyPort(port) {
+  return new Promise((resolve, reject) => {
+    const blocker = createServer();
+    blocker.once("error", (error) => {
+      if (error.code === "EADDRINUSE") {
+        resolve(null);
+        return;
+      }
+      reject(error);
+    });
+    blocker.listen(port, "127.0.0.1", () => resolve(blocker));
   });
 }
 
