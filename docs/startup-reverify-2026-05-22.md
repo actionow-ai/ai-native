@@ -572,3 +572,16 @@ Forty-eighth pass at `2026-05-22 12:19 +0800` after proactive decisive-closer wa
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@d3d70b4` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and blue-sky live-preview branches are evidence-only.
 - Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
+
+Forty-ninth pass at `2026-05-22 12:31 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 24608 after an initial literal-token retry; explicit `role_description` is still not exposed in session metadata, so this pass follows the established `decisive-closer` role inferred from project plans, goals, and branch ownership.
+- `tc.chat.list scope=project`: durable project context remains the Chinese 3D butterfly discovery globe; human-facing project output should stay Chinese, and the active risk remains duplicate clickable-frontend review targets.
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/8173-live-preview-recheck`.
+- `git branch -r --sort=-committerdate`: showed the new blue-sky recheck branch above `origin/agent/decisive-closer/startup-consolidation`.
+- `git log origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/8173-live-preview-recheck`: showed only `9385734 Record 8173 preview restart recheck` and `9ba2c16 Record 8173 live preview recheck`.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/8173-live-preview-recheck`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky branch is preview evidence, not a second frontend baseline.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and `agent/blue-sky/8173-live-preview-recheck` is evidence-only.
+- Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
