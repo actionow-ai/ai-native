@@ -389,3 +389,15 @@ Thirty-sixth pass at `2026-05-22 09:56 +0800` after a proactive decisive-closer 
 - `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation` remains the sole startup/clickable-frontend review target, while `agent/blue-sky/startup-clarity-smoke` is reference-only.
+
+Thirty-seventh pass at `2026-05-22 10:00 +0800` after a proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 20657; `session_meta` still has no explicit `role_description`, so this pass follows the established `decisive-closer` role inferred from prior plans and branch ownership.
+- `tc.chat.list scope=project`: latest useful thread remains the Chinese 3D butterfly discovery globe and the `@pragmatic-engineer` startup concern; human-facing project output should stay Chinese.
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/pragmatic-start-script-smoke`.
+- `git show --stat --oneline origin/agent/blue-sky/pragmatic-start-script-smoke`: confirmed `c3b7633` adds only `docs/pragmatic-start-script-smoke-2026-05-22.md` on top of `origin/agent/pragmatic-engineer/browsable-butterfly-globe@0d5e42c`.
+- `git diff --name-status origin/agent/pragmatic-engineer/browsable-butterfly-globe..origin/agent/blue-sky/pragmatic-start-script-smoke`: showed only that smoke-note document, so the new branch adds no frontend code, seed data, script, or test surface.
+- `git merge-base --is-ancestor origin/agent/pragmatic-engineer/browsable-butterfly-globe origin/agent/decisive-closer/startup-consolidation`: returned 0; the decisive startup branch already contains the pragmatic start-script head plus later startup/browser-test consolidation.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows on the branch's default browser-test port `8174`.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the sole consolidated startup/clickable-frontend review target. `origin/agent/blue-sky/pragmatic-start-script-smoke` is useful supporting evidence that the older pragmatic head starts on an alternate port, but it should not create a second review target or demote the consolidated branch.
