@@ -633,3 +633,17 @@ Fifty-third pass at `2026-05-22 12:55 +0800` after proactive decisive-closer wak
 - `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
 - `node -e` over `http://127.0.0.1:8173/` and `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200 for both, parsed 10 records, and all 10 records are approved.
 - Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and treat `agent/blue-sky/startup-recheck-1252` as absorbed evidence, not a parallel review target.
+
+Fifty-fourth pass at `2026-05-22 12:59 +0800` after proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 23517; explicit `role_description` was still not exposed by session metadata, self/project memory search, KB search, or local context search, so this pass follows the established blue-sky role inferred from prior project chat and branch ownership.
+- `tc.chat.list scope=project` and active team goal read: durable context remains the Chinese 3D butterfly discovery globe; the active goal is still the interactive 3D butterfly discovery atlas, and human-facing output should stay Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `99ff50f` to `bff3698`.
+- `git show --stat origin/agent/decisive-closer/startup-consolidation -1`: confirmed `bff3698` only appends this startup evidence document.
+- `git diff --name-status HEAD..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`; no frontend code, data, scripts, or tests changed.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `git diff --check HEAD..origin/agent/decisive-closer/startup-consolidation`: passed.
+- `tc.chat.post`: still blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `origin/agent/decisive-closer/startup-consolidation@bff3698` remains the sole startup/clickable-frontend review target, `127.0.0.1:8173` is still serving the prototype, formal seed remains 10 approved records, and older blue-sky/proactive startup branches remain evidence-only.
+- Decision: no frontend implementation change is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this blue-sky branch as visible evidence while project chat writes are paused.
