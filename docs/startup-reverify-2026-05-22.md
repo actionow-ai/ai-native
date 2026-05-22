@@ -380,3 +380,12 @@ Thirty-fifth pass at `2026-05-22 09:49 +0800` after a proactive decisive-closer 
 - `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@327c96b` remains the sole startup/clickable-frontend review target, while `agent/blue-sky/cceb551-reverify` is reference-only.
+
+Thirty-sixth pass at `2026-05-22 09:56 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/startup-clarity-smoke`.
+- `git show --stat --oneline origin/agent/blue-sky/startup-clarity-smoke`: confirmed the new branch only changes this startup evidence document.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/startup-clarity-smoke`: showed only `docs/startup-reverify-2026-05-22.md`, so it adds no frontend code, seed data, script, or test surface.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation` remains the sole startup/clickable-frontend review target, while `agent/blue-sky/startup-clarity-smoke` is reference-only.
