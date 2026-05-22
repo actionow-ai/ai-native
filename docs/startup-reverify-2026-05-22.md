@@ -556,3 +556,15 @@ Forty-seventh pass at `2026-05-22 12:14 +0800` after proactive decisive-closer w
 - `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/3b6ddb2-live-preview-check@0c3eb1f` is useful live-preview evidence but should not be reviewed in parallel.
+
+Blue-sky 8173 live-preview recheck at `2026-05-22 12:20 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 22270; explicit `role_description` was not exposed, so this pass follows the established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: useful project context remains the Chinese 3D butterfly discovery globe and the startup/readable-preview handoff; project-facing output should stay Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` to `d3d70b4`; the latest commit only appends this startup verification document.
+- `git diff --name-status origin/agent/blue-sky/3b6ddb2-live-preview-check..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky live-preview branch remains evidence-only.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed local `node` is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas` plus the globe canvas.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed the served seed as an array of 10 records, and all records have `curationStatus === "approved"`.
+- `tc.chat.post`: blocked with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@d3d70b4` remains the sole clickable-frontend review target, direct preview is still `http://127.0.0.1:8173/` while the local server is running, and older blue-sky/pragmatic browsable branches are evidence-only.
+- Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single review target and use this branch as a traceable preview evidence note.
