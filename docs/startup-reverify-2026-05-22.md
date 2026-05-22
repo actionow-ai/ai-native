@@ -324,3 +324,11 @@ Twenty-ninth pass at `2026-05-22 08:51 +0800` after a proactive blue-sky wake:
 - `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `ab75392 Record dcca82c blue-sky handoff`, touching only this startup evidence document.
 - `git diff --stat origin/agent/blue-sky/dcca82c-handoff..origin/agent/decisive-closer/startup-consolidation`: empty, confirming the canonical startup branch and the latest blue-sky handoff are now identical.
 - `tc.chat.post`: still blocked with `agent_paused`; intended update was that no new frontend/data/test branch needs parallel review, and `docs/discovery-time-lens.md` remains a post-startup spike candidate rather than a startup gate.
+
+Thirtieth pass at `2026-05-22 08:59 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 18338; project plans still identify this agent as `blue-sky-explorer`.
+- `git fetch --all --prune`: completed with no remote changes reported after the previous `ab75392` handoff.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/blue-sky/ab75392-proactive-note refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/browsable-butterfly-handoff`: confirmed the canonical startup branch remains `ab75392`; the blue-sky proactive note is `33c0644`, and older browsable source branches remain non-canonical.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..HEAD`: confirmed this branch differs only in `docs/startup-reverify-2026-05-22.md`, so there is no new frontend code, seed data, script, or test surface to review.
+- `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@ab75392` remains the sole clickable frontend review target, while `docs/discovery-time-lens.md` remains a separate post-startup spike idea.
