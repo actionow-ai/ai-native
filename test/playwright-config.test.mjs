@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 test("browser test server defaults away from the manual preview port", async () => {
@@ -13,6 +14,13 @@ test("browser test server honors BUTTERFLY_GLOBE_PORT", async () => {
 
   assert.equal(config.webServer.url, "http://127.0.0.1:8199/");
   assert.match(config.webServer.command, /--port 8199/);
+});
+
+test("browser spec navigates to the same configurable preview port", async () => {
+  const spec = await readFile(new URL("butterfly-globe.browser.spec.mjs", import.meta.url), "utf8");
+
+  assert.match(spec, /BUTTERFLY_GLOBE_PORT/);
+  assert.doesNotMatch(spec, /http:\/\/127\.0\.0\.1:8173\//);
 });
 
 async function loadConfig(env) {

@@ -3,7 +3,8 @@ import pngjs from "pngjs";
 
 const { PNG } = pngjs;
 
-const url = process.env.BUTTERFLY_GLOBE_URL ?? "http://127.0.0.1:8173/";
+const browserTestPort = process.env.BUTTERFLY_GLOBE_PORT ?? "8174";
+const url = process.env.BUTTERFLY_GLOBE_URL ?? `http://127.0.0.1:${browserTestPort}/`;
 
 const viewports = [
   { name: "desktop", width: 1440, height: 900 },
