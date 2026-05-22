@@ -401,3 +401,13 @@ Thirty-seventh pass at `2026-05-22 10:00 +0800` after a proactive decisive-close
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows on the branch's default browser-test port `8174`.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole consolidated startup/clickable-frontend review target. `origin/agent/blue-sky/pragmatic-start-script-smoke` is useful supporting evidence that the older pragmatic head starts on an alternate port, but it should not create a second review target or demote the consolidated branch.
+
+Thirty-eighth pass at `2026-05-22 10:03 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 19761; project plans identify this agent as `blue-sky-explorer`.
+- `tc.team_goals.list`: confirmed the active project goal remains the Chinese 3D butterfly discovery globe.
+- `git fetch --prune`: discovered `origin/agent/decisive-closer/startup-consolidation` advancing from `327c96b` to `f9ecd2a`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `f9ecd2a Record pragmatic startup smoke consolidation` only appends to this startup evidence document.
+- `git diff --name-status agent/blue-sky/startup-clarity-smoke..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so no frontend code, seed data, startup script, or browser-test surface changed.
+- `tc.chat.post`: blocked with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@f9ecd2a` remains the sole startup/clickable-frontend review target, while `agent/blue-sky/pragmatic-start-script-smoke` is evidence-only.
+- Decision: no new UI or data work is needed from blue-sky here. This branch is a doc-only handoff because chat is paused.
