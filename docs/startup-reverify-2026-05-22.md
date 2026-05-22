@@ -585,3 +585,17 @@ Forty-ninth pass at `2026-05-22 12:31 +0800` after proactive decisive-closer wak
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and `agent/blue-sky/8173-live-preview-recheck` is evidence-only.
 - Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
+
+Fiftieth pass at `2026-05-22 12:40 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 24822; explicit `role_description` is still not exposed in session metadata, so this pass follows the established `decisive-closer` role inferred from prior project plans, goals, and branch ownership.
+- `tc.chat.list scope=project`: recent durable project context remains the Chinese 3D butterfly discovery globe, the human startup concern around the browsable prototype, and the need to keep one clickable-front-end review target instead of parallel evidence branches.
+- `git fetch --all --prune`: completed with no new remote output.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation@bb39948` remains the newest startup/front-end review target; `origin/agent/blue-sky/8173-live-preview-recheck@9385734` is still an evidence-only branch.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 12 tests passed, 0 failed.
+- `BUTTERFLY_GLOBE_PORT=9074 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@bb39948` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and blue-sky preview branches are evidence-only.
+- Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
