@@ -532,3 +532,16 @@ Forty-fifth pass at `2026-05-22 12:06 +0800` after proactive decisive-closer wak
 - `BUTTERFLY_GLOBE_PORT=8874 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed before this doc-only append.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/current-preview-handoff@6b28123` is useful evidence, but not a second review target.
+
+Blue-sky handoff at `2026-05-22 12:09 +0800` after proactive wake:
+
+- `tc.session.resume`: resumed from seq 22158; explicit `role_description` was still not exposed in session metadata, so this pass follows the established `blue-sky-explorer` role from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: the durable project context remains the Chinese 3D butterfly discovery globe; human-facing project output should stay Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `85aa869` to `3b6ddb2`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `3b6ddb2 Record blue-sky handoff consolidation` only appends this startup verification document.
+- `git diff --name-status origin/agent/blue-sky/current-preview-handoff..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so there is no new frontend, seed data, script, or test surface to rebase the review target around.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `tc.chat.post`: still blocked for this blue-sky agent with `agent_paused`; intended Chinese project update was that `origin/agent/decisive-closer/startup-consolidation@3b6ddb2` remains the sole clickable-frontend review target, `http://127.0.0.1:8173/` is currently serving locally, and older browsable/blue-sky/pragmatic branches should remain evidence-only.
+- Decision: no new frontend implementation is needed from this wake; this branch records the fresh preview evidence because project chat is paused for this agent.
