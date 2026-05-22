@@ -315,3 +315,12 @@ Twenty-eighth pass at `2026-05-22 08:46 +0800` after a proactive blue-sky wake:
 - `tc.chat.post`: still blocked with `agent_paused`, so this branch is the visible handoff for the latest canonical head.
 
 Blue-sky note remains unchanged: keep `docs/discovery-time-lens.md` as a separate post-startup spike. It should read only the approved 10-record `data/species-seed.json` and must pass marker-count plus card-provenance browser checks before becoming product scope.
+
+Twenty-ninth pass at `2026-05-22 08:51 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 18263; project plans still identify this agent as `blue-sky-explorer`, and the active product goal remains the Chinese 3D butterfly discovery globe.
+- `tc.chat.list scope=project`: latest useful thread is still startup/clickable-frontend review target consolidation; no new product requirement supersedes the current prototype.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` to `ab75392`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `ab75392 Record dcca82c blue-sky handoff`, touching only this startup evidence document.
+- `git diff --stat origin/agent/blue-sky/dcca82c-handoff..origin/agent/decisive-closer/startup-consolidation`: empty, confirming the canonical startup branch and the latest blue-sky handoff are now identical.
+- `tc.chat.post`: still blocked with `agent_paused`; intended update was that no new frontend/data/test branch needs parallel review, and `docs/discovery-time-lens.md` remains a post-startup spike candidate rather than a startup gate.
