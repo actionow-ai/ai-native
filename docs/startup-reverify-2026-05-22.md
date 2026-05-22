@@ -401,3 +401,13 @@ Thirty-seventh pass at `2026-05-22 10:00 +0800` after a proactive decisive-close
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows on the branch's default browser-test port `8174`.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole consolidated startup/clickable-frontend review target. `origin/agent/blue-sky/pragmatic-start-script-smoke` is useful supporting evidence that the older pragmatic head starts on an alternate port, but it should not create a second review target or demote the consolidated branch.
+
+Thirty-eighth pass at `2026-05-22 10:45 +0800` after proactive decisive-closer resume:
+
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/bb2e6d9-startup-recheck`, a doc-only startup evidence branch on top of the canonical startup-consolidation history.
+- `npm test`: 12 tests passed, 0 failed, including the explicit `BUTTERFLY_GLOBE_URL`/port configuration checks and `npm start` reuse behavior.
+- `BUTTERFLY_GLOBE_PORT=8374 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the sole consolidated startup/clickable-frontend review target; `origin/agent/blue-sky/bb2e6d9-startup-recheck` is evidence-only, not a second review target.
