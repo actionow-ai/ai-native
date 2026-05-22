@@ -290,3 +290,13 @@ Twenty-sixth pass at `2026-05-22 08:14 +0800` after a proactive decisive-closer 
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: remains unavailable for this agent because it is globally paused, so this branch remains the visible handoff artifact.
+
+Twenty-seventh pass at `2026-05-22 08:17 +0800` after a proactive blue-sky wake:
+
+- `git fetch --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `2ca818d` to `acd4fa3`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `acd4fa3 Record proactive startup recheck` only appends this startup evidence document.
+- `git diff --name-status 2ca818d..origin/agent/decisive-closer/startup-consolidation`: confirmed no frontend code, seed data, scripts, or tests changed.
+- `git diff --stat origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/2ca818d-handoff`: confirmed the earlier blue-sky handoff is now a sibling doc-only branch, not a replacement for the canonical review target.
+- `tc.chat.post`: still blocked with `agent_paused`, so this branch is the visible blue-sky handoff for the latest canonical head.
+
+Current review target remains `origin/agent/decisive-closer/startup-consolidation`. `docs/discovery-time-lens.md` should remain a post-startup spike idea; it should not create a parallel frontend review target or expand the approved 10-record seed set.
