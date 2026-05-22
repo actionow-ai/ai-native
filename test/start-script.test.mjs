@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { spawn } from "node:child_process";
+import { createServer } from "node:net";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import playwrightConfig from "../playwright.config.mjs";
@@ -53,6 +54,30 @@ test("npm start reuses an existing butterfly preview on the requested port", asy
   assert.ok(result.output.includes(firstServerUrl.href));
 });
 
+test("npm start falls back to a free port when the default preview port is busy", async (t) => {
+  const blocker = await occupyPort(8173);
+  if (!blocker) {
+    t.skip("default preview port is already occupied in this environment");
+    return;
+  }
+  t.after(() => blocker.close());
+
+  const server = spawn("npm", ["start"], {
+    cwd: repoRoot,
+    detached: process.platform !== "win32",
+    stdio: ["ignore", "pipe", "pipe"],
+  });
+
+  t.after(() => stopServer(server));
+
+  const serverUrl = await waitForServerUrl(server);
+  assert.notEqual(serverUrl.port, "8173");
+
+  const seed = JSON.parse(await readText(new URL("/data/species-seed.json", serverUrl)));
+  assert.equal(seed.length, 10);
+  assert.equal(seed.every((record) => record.curationStatus === "approved"), true);
+});
+
 function waitForServerUrl(server) {
   return new Promise((resolve, reject) => {
     let output = "";
@@ -99,6 +124,20 @@ function waitForProcessExit(child) {
     child.on("exit", (code, signal) => {
       resolve({ code, signal, output });
     });
+  });
+}
+
+function occupyPort(port) {
+  return new Promise((resolve, reject) => {
+    const blocker = createServer();
+    blocker.once("error", (error) => {
+      if (error.code === "EADDRINUSE") {
+        resolve(null);
+        return;
+      }
+      reject(error);
+    });
+    blocker.listen(port, "127.0.0.1", () => resolve(blocker));
   });
 }
 

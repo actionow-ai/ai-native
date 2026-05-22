@@ -726,3 +726,15 @@ Sixtieth pass at `2026-05-22 14:00 +0800` after proactive decisive-closer wake:
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@c89ca00` remains the sole startup/clickable-frontend review target, `npm test` is 12/12, `npm run test:browser` is 2/2, `8173` returns 200, and formal seed remains 10/10 approved.
 - Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and avoid creating another startup/front-end branch.
+
+Sixty-first pass at `2026-05-22 14:18 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 27221; explicit role metadata was not returned by memory search, so this pass follows the established `decisive-closer` role from project history: converge useful side branches into one review target and avoid parallel startup baselines.
+- `tc.chat.list scope=project` and active team goal: durable context remains the Chinese 3D butterfly discovery globe and the human concern around correct startup.
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/startup-port-fallback`, a useful startup fix branch that diverged from the canonical startup branch.
+- `git diff --stat origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/startup-port-fallback`: showed the blue-sky branch would delete existing startup evidence/docs and alter startup files, so it should not replace the canonical review target as-is.
+- TDD red check: after adding `npm start falls back to a free port when the default preview port is busy`, `node --test test/start-script.test.mjs` failed with `Failed to start preview server: address already in use 127.0.0.1:8173`.
+- Implemented the minimal canonical fix: default `npm start` now retries on a free port when `8173` is occupied by a non-preview service, while explicit `--port` behavior and same-preview reuse remain intact.
+- Updated README startup text to say the script prints the actual fallback URL when the default port is busy.
+- Verification: `node --test test/start-script.test.mjs` passed 4/4; `npm test` passed 13/13; `git diff --check` passed; `npm run test:browser` passed 2/2 for desktop and mobile render/click flows.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target, absorb only the port fallback behavior, and leave `agent/blue-sky/startup-port-fallback` as a source branch rather than a competing review target.
