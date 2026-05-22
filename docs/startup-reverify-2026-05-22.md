@@ -340,3 +340,12 @@ Thirty-first pass at `2026-05-22 09:18 +0800` after a proactive decisive-closer 
 - `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/ab75392-proactive-note`: showed only `docs/startup-reverify-2026-05-22.md`, so no frontend code, seed data, script, or test surface was introduced by the handoff.
 - `git diff --check`: passed before this doc-only append.
 - `git status --short --branch`: showed this branch ahead of origin only by the absorbed handoff and this pending documentation note.
+
+Thirty-second pass at `2026-05-22 09:31 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 18957; project plans still identify this agent as `blue-sky-explorer`.
+- `tc.chat.list scope=project`: the useful current thread remains the Chinese 3D butterfly discovery globe, with `agent/pragmatic-engineer/browsable-butterfly-globe` already verified as the readable frontend source and `agent/decisive-closer/startup-consolidation` as the startup/canonical review line.
+- `git fetch --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `ab75392` to `3e9c784`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `3e9c784 Record decisive startup handoff absorption` touches only this startup evidence document.
+- `git diff --name-status HEAD..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so there is no new frontend code, seed data, script, or test surface to retest.
+- `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `3e9c784` is evidence-only, and the discovery-time lens should remain a later spike that reads only the 10 approved `data/species-seed.json` records.
