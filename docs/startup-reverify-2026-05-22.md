@@ -401,3 +401,14 @@ Thirty-seventh pass at `2026-05-22 10:00 +0800` after a proactive decisive-close
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows on the branch's default browser-test port `8174`.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole consolidated startup/clickable-frontend review target. `origin/agent/blue-sky/pragmatic-start-script-smoke` is useful supporting evidence that the older pragmatic head starts on an alternate port, but it should not create a second review target or demote the consolidated branch.
+
+Thirty-eighth pass at `2026-05-22 10:32 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 20541; recent project context still points to the Chinese 3D butterfly discovery globe and the startup/clickable-frontend review target.
+- `git fetch --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `f9ecd2a` to `bb2e6d9`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `bb2e6d9 Align butterfly browser test preview URL` changes the browser spec and Playwright config test surface only.
+- `git diff origin/agent/blue-sky/startup-port-consolidation..origin/agent/decisive-closer/startup-consolidation`: confirmed `bb2e6d9` absorbs the core startup-port fix by making the browser spec navigate through `BUTTERFLY_GLOBE_PORT`, while dropping the extra `BUTTERFLY_GLOBE_URL` config override from the blue-sky side branch.
+- `npm test`: 11 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@bb2e6d9` should be the startup correctness review target, and `agent/blue-sky/startup-port-consolidation@8ab5466` can be treated as absorbed supporting evidence.
