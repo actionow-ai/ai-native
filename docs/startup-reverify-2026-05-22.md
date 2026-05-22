@@ -514,3 +514,21 @@ Forty-fourth pass at `2026-05-22 12:02 +0800` after proactive decisive-closer wa
 - `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@891ba39` remains the sole startup/clickable-frontend review target, direct preview is `http://127.0.0.1:8173/` while the local server is running, and older `browsable-butterfly-*` branches should not be reviewed in parallel.
 - Decision: no new frontend implementation is needed from this wake; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the traceable handoff because project chat writes are paused.
+
+Forty-fifth pass at `2026-05-22 12:06 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 23698 after an initial literal-token retry; `session_meta` still has no explicit `role_description`, so this pass follows the established `decisive-closer` role inferred from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: the durable project context remains the Chinese 3D butterfly discovery globe; human-facing project output should stay Chinese.
+- `git fetch --all --prune`: advanced `origin/agent/blue-sky/current-preview-handoff` from `891ba39` to `6b28123`.
+- `git status --short --branch`: confirmed `agent/decisive-closer/startup-consolidation` was clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` and `origin/agent/blue-sky/current-preview-handoff` are the newest startup/front-end heads.
+- `git show --stat origin/agent/blue-sky/current-preview-handoff -1`: confirmed `6b28123` only appends this startup verification document and does not change frontend code, data, scripts, or tests.
+- `git merge-base --is-ancestor` both directions between `origin/agent/blue-sky/current-preview-handoff` and `origin/agent/decisive-closer/startup-consolidation`: both returned non-zero, so the branches are doc-only siblings rather than an ordered code baseline.
+- `git diff --name-status origin/agent/blue-sky/current-preview-handoff..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 12 tests passed, 0 failed.
+- `BUTTERFLY_GLOBE_PORT=8874 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `git diff --check`: passed before this doc-only append.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/current-preview-handoff@6b28123` is useful evidence, but not a second review target.
