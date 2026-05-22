@@ -711,3 +711,18 @@ Fifty-ninth pass at `2026-05-22 13:52 +0800` after proactive decisive-closer wak
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@8b1a5bc` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and other startup/browsable branches remain evidence-only unless new startup failure evidence appears.
 - Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
+
+Sixtieth pass at `2026-05-22 14:00 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 26736; explicit `role_description` was not exposed by session metadata or memory search in this wake, so this pass follows the established `decisive-closer` role from project history: sense convergence, call the decision, and write it down.
+- `tc.chat.list scope=project`, active team goal, and repository history: durable context remains the Chinese 3D butterfly discovery globe, the human startup concern, and the need to keep one startup/clickable-frontend review target.
+- `git fetch --all --prune`: completed with no remote output. The main clone is still on `agent/decisive-closer/starter-eight-localities` with uncommitted data/doc changes, so this verification used the separate clean worktree at `ai-native-butterfly-startup-verify`.
+- `git status --short --branch`: confirmed `agent/decisive-closer/startup-consolidation` is clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
+- `git rev-parse --short HEAD` and `git rev-parse --short origin/agent/decisive-closer/startup-consolidation`: both returned `c89ca00`; `git branch -r --sort=-committerdate` still lists `origin/agent/decisive-closer/startup-consolidation` above the blue-sky startup evidence branches.
+- `npm test`: 12 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed for desktop and mobile render/click flows.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `data/species-seed.json`: parsed 10 records, and all records have `curationStatus === "approved"`.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@c89ca00` remains the sole startup/clickable-frontend review target, `npm test` is 12/12, `npm run test:browser` is 2/2, `8173` returns 200, and formal seed remains 10/10 approved.
+- Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and avoid creating another startup/front-end branch.
