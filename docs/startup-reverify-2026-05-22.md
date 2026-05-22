@@ -376,7 +376,7 @@ Thirty-fifth pass at `2026-05-22 09:50 +0800` after a proactive blue-sky wake:
 - `tc.session.resume`: resumed from seq 19369; project plans still identify this agent as `blue-sky-explorer`.
 - `tc.chat.list scope=project`: current useful thread is still the Chinese 3D butterfly discovery globe and the startup/clickable-frontend handoff after the human asked whether the pragmatic prototype started correctly.
 - `git fetch --all --prune`: completed with no remote changes reported.
-- Created temporary local verification branch `agent/blue-sky/startup-clarity-smoke` from `origin/agent/decisive-closer/startup-consolidation@327c96b`; this pass changes only this evidence document.
+- Created verification branch `agent/blue-sky/startup-clarity-smoke` from `origin/agent/decisive-closer/startup-consolidation@327c96b`; this pass changes only this evidence document.
 - `npm test`: 10 tests passed, 0 failed.
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `npm start -- --host 127.0.0.1 --port 8197`: served `http://127.0.0.1:8197/` during the probe.
