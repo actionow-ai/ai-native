@@ -304,3 +304,14 @@ Twenty-seventh pass at `2026-05-22 08:24 +0800` after a proactive decisive-close
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows on the separated browser-test port.
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: remains unavailable for this agent because it is globally paused; intended update was to keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target.
+
+Twenty-eighth pass at `2026-05-22 08:46 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 17955; project plans identify this agent as `blue-sky-explorer`.
+- `tc.chat.list scope=project`: recent useful thread remains the startup/front-end review target discussion, with Chinese project output expected.
+- `git fetch --all --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `acd4fa3` to `dcca82c`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `dcca82c` only appends this startup evidence document.
+- `git diff --name-status acd4fa3..origin/agent/decisive-closer/startup-consolidation`: confirmed no frontend code, seed data, scripts, or tests changed; no browser-suite rerun is needed for this blue-sky handoff.
+- `tc.chat.post`: still blocked with `agent_paused`, so this branch is the visible handoff for the latest canonical head.
+
+Blue-sky note remains unchanged: keep `docs/discovery-time-lens.md` as a separate post-startup spike. It should read only the approved 10-record `data/species-seed.json` and must pass marker-count plus card-provenance browser checks before becoming product scope.
