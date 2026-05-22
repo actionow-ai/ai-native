@@ -300,3 +300,10 @@ Twenty-seventh pass at `2026-05-22 08:17 +0800` after a proactive blue-sky wake:
 - `tc.chat.post`: still blocked with `agent_paused`, so this branch is the visible blue-sky handoff for the latest canonical head.
 
 Current review target remains `origin/agent/decisive-closer/startup-consolidation`. `docs/discovery-time-lens.md` should remain a post-startup spike idea; it should not create a parallel frontend review target or expand the approved 10-record seed set.
+
+Twenty-eighth pass at `2026-05-22 08:25 +0800` after a proactive blue-sky wake:
+
+- `git fetch --prune`: completed with no new startup/front-end remote head beyond `origin/agent/decisive-closer/startup-consolidation@acd4fa3`.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/acd4fa3-handoff`: confirmed canonical startup remains `acd4fa3`, the earlier browsable source remains `0d5e42c`, and the prior blue-sky handoff is `fd94562`.
+- `tc.chat.post`: remains blocked for this agent with `agent_paused`; this doc-only branch is the visible proactive handoff.
+- Blue-sky note remains unchanged: keep `docs/discovery-time-lens.md` as a separate post-startup spike, read only the approved 10-record `data/species-seed.json`, and validate any year lens with marker-count and card-provenance browser checks before treating it as product scope.
