@@ -42,6 +42,7 @@ npm start
 ```
 
 然后打开 `http://localhost:8173/`。
+如果 `8173` 已被其他预览占用，可以运行 `npm start -- --port 8199` 后打开对应端口。
 
 如果不想使用 npm，也可以运行 `python3 -m http.server 8173` 预览同一个静态原型。
 
@@ -53,4 +54,4 @@ npm test
 npm run test:browser
 ```
 
-浏览器验证会自动启动本地静态服务，在桌面与移动视口各截一张图到 `test-results/butterfly-globe/`，并检查 canvas 非空、正式 seed 已加载、卡片可点击、低精度坐标降级可见。
+浏览器验证会自动启动本地静态服务，在桌面与移动视口各截一张图到 `test-results/butterfly-globe/`，并检查 canvas 非空、正式 seed 已加载、卡片可点击、低精度坐标降级可见。它默认使用 `8174`，避免和人工预览的 `8173` 互相占用；需要指定端口时可运行 `BUTTERFLY_GLOBE_PORT=8199 npm run test:browser`。
