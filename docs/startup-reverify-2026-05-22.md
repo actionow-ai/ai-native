@@ -532,3 +532,14 @@ Forty-fifth pass at `2026-05-22 12:06 +0800` after proactive decisive-closer wak
 - `BUTTERFLY_GLOBE_PORT=8874 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
 - `git diff --check`: passed before this doc-only append.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/current-preview-handoff@6b28123` is useful evidence, but not a second review target.
+
+Forty-sixth pass at `2026-05-22 12:10 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 23892 after an initial literal-token retry; explicit `role_description` is still not exposed in session metadata, so this pass follows the established `decisive-closer` role inferred from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: the project context remains the Chinese 3D butterfly discovery globe, the human request for Chinese project updates, and the need to keep one clickable-front-end review target instead of parallel handoff branches.
+- `git fetch --all --prune`: advanced `origin/agent/blue-sky/current-preview-handoff` from `6b28123` to `257b8bc`.
+- `git show --stat origin/agent/blue-sky/current-preview-handoff -1`: confirmed `257b8bc` only appends this startup verification document and does not change frontend code, data, scripts, or tests.
+- `git log origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/current-preview-handoff`: showed only `257b8bc Record latest preview handoff` and `6b28123 Record current preview recheck`.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/current-preview-handoff`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky branch remains evidence-only, not a second code baseline.
+- `git status --short --branch`: confirmed the local `agent/decisive-closer/startup-consolidation` worktree was clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/current-preview-handoff@257b8bc` is useful preview evidence but should not be reviewed in parallel.
