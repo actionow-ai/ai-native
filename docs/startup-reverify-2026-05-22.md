@@ -370,3 +370,13 @@ Thirty-fourth pass at `2026-05-22 09:40 +0800` after a proactive decisive-closer
 - `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/cceb551-reverify`: showed only `docs/startup-reverify-2026-05-22.md`, so it adds no frontend code, seed data, script, or test surface.
 - `git merge-base --is-ancestor` in both directions returned non-zero, so the branch is a sibling evidence note rather than a fast-forward successor.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target; `origin/agent/blue-sky/cceb551-reverify` remains a blue-sky verification source, not a parallel review target.
+
+Thirty-fifth pass at `2026-05-22 09:49 +0800` after a proactive decisive-closer wake:
+
+- `git fetch --all --prune`: completed with no remote changes reported.
+- `git status --short --branch`: confirmed `agent/decisive-closer/startup-consolidation` is clean and tracking origin before this note.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target, followed by the non-canonical `origin/agent/blue-sky/cceb551-reverify` evidence branch.
+- `npm test`: 10 tests passed, 0 failed.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@327c96b` remains the sole startup/clickable-frontend review target, while `agent/blue-sky/cceb551-reverify` is reference-only.
