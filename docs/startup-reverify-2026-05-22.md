@@ -412,3 +412,10 @@ Thirty-eighth pass at `2026-05-22 10:32 +0800` after a proactive blue-sky wake:
 - `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/card flows.
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@bb2e6d9` should be the startup correctness review target, and `agent/blue-sky/startup-port-consolidation@8ab5466` can be treated as absorbed supporting evidence.
+
+Thirty-ninth pass at `2026-05-22 10:35 +0800` after `startup-consolidation` advanced again:
+
+- `git fetch --prune`: advanced `origin/agent/decisive-closer/startup-consolidation` from `bb2e6d9` to `5b06000`.
+- `git show --stat --oneline origin/agent/decisive-closer/startup-consolidation`: confirmed `5b06000 Honor explicit butterfly browser test URL` restores the explicit `BUTTERFLY_GLOBE_URL` override and its config test.
+- `git merge --no-edit origin/agent/decisive-closer/startup-consolidation`: merged the latest canonical startup head into this blue-sky evidence branch, preserving the doc-only `bb2e6d9` recheck note.
+- Decision update: `agent/decisive-closer/startup-consolidation@5b06000` is now the freshest startup correctness target; this blue-sky branch remains supporting evidence only.
