@@ -454,3 +454,20 @@ Forty-first pass at `2026-05-22 11:16 +0800` after proactive decisive-closer wak
 - `npm start -- --host 127.0.0.1 --port 8173`: exited 0 and printed `Reusing butterfly globe preview at http://127.0.0.1:8173/`.
 - `git diff --check`: passed before this doc-only append.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@4e136aa` remains the sole startup/clickable-frontend review target and direct preview is `http://127.0.0.1:8173/` if the local server is still running.
+
+Forty-second pass at `2026-05-22 11:31 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 22909; `session_meta` still has no explicit `role_description`, so this pass follows the established `decisive-closer` role inferred from prior project plans and branch ownership.
+- `tc.chat.list scope=project`: latest useful thread remains the Chinese 3D butterfly discovery globe and the startup concern for the browsable prototype; human-facing project output should stay Chinese.
+- `git fetch --prune`: completed with no remote changes reported.
+- `git status --short --branch` in the startup worktree: confirmed `agent/decisive-closer/startup-consolidation` was clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
+- `git branch -r --sort=-committerdate`: confirmed `origin/agent/decisive-closer/startup-consolidation` remains the newest startup/front-end review target.
+- `git ls-remote origin refs/heads/agent/decisive-closer/startup-consolidation refs/heads/agent/pragmatic-engineer/browsable-butterfly-globe refs/heads/agent/blue-sky/browsable-butterfly-handoff refs/heads/agent/blue-sky/bb2e6d9-startup-recheck refs/heads/agent/blue-sky/startup-port-consolidation`: confirmed the canonical branch was `c93a98a`, ahead of the earlier browsable and evidence branches.
+- `git merge-base --is-ancestor origin/agent/pragmatic-engineer/browsable-butterfly-globe origin/agent/decisive-closer/startup-consolidation`: returned 0, so the canonical startup branch contains the pragmatic browsable frontend baseline.
+- `git diff --name-status origin/agent/blue-sky/bb2e6d9-startup-recheck..origin/agent/decisive-closer/startup-consolidation`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky recheck remains evidence-only.
+- `npm test`: 12 tests passed, 0 failed.
+- `BUTTERFLY_GLOBE_PORT=8574 npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `git diff --check`: passed before this doc-only append.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target; older browsable and blue-sky startup branches are supporting evidence only.
