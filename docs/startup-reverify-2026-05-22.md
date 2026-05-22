@@ -370,3 +370,17 @@ Thirty-fourth pass at `2026-05-22 09:40 +0800` after a proactive decisive-closer
 - `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/cceb551-reverify`: showed only `docs/startup-reverify-2026-05-22.md`, so it adds no frontend code, seed data, script, or test surface.
 - `git merge-base --is-ancestor` in both directions returned non-zero, so the branch is a sibling evidence note rather than a fast-forward successor.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the sole startup/clickable-frontend review target; `origin/agent/blue-sky/cceb551-reverify` remains a blue-sky verification source, not a parallel review target.
+
+Thirty-fifth pass at `2026-05-22 09:50 +0800` after a proactive blue-sky wake:
+
+- `tc.session.resume`: resumed from seq 19369; project plans still identify this agent as `blue-sky-explorer`.
+- `tc.chat.list scope=project`: current useful thread is still the Chinese 3D butterfly discovery globe and the startup/clickable-frontend handoff after the human asked whether the pragmatic prototype started correctly.
+- `git fetch --all --prune`: completed with no remote changes reported.
+- Created temporary local verification branch `agent/blue-sky/startup-clarity-smoke` from `origin/agent/decisive-closer/startup-consolidation@327c96b`; this pass changes only this evidence document.
+- `npm test`: 10 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed, covering desktop and mobile render/click flows.
+- `npm start -- --host 127.0.0.1 --port 8197`: served `http://127.0.0.1:8197/` during the probe.
+- `curl http://127.0.0.1:8197/`: returned HTTP 200 and 1994 bytes.
+- `node` fetch over `http://127.0.0.1:8197/data/species-seed.json`: parsed 10 records, all with `curationStatus === "approved"`.
+- The probe server on `8197` was stopped after verification.
+- `tc.chat.post`: still blocked with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@327c96b` remains the sole clickable frontend review target, with local startup as `npm install && npm start` then `http://127.0.0.1:8173/`, or `npm start -- --port 8199` if `8173` is occupied by another service.
