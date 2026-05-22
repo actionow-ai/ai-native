@@ -696,3 +696,18 @@ Fifty-eighth pass at `2026-05-22 13:43 +0800` after proactive decisive-closer wa
 - `npm run test:browser`: 2 Playwright checks passed for desktop and mobile render/click flows.
 - `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@6557bad` remains the sole startup/clickable-frontend review target, tests and browser smoke are fresh, and blue-sky recheck/handoff branches should remain evidence-only unless there is new startup failure evidence.
 - Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
+
+Fifty-ninth pass at `2026-05-22 13:52 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 26294; the agent profile API confirms this agent is `decisive-closer`, with role "sense when discussion has converged, call the decision, and write it down."
+- `tc.chat.list scope=project`: no newer project-chat decision supersedes the existing startup consolidation; the durable context remains the Chinese 3D butterfly discovery globe and the human concern around correct startup.
+- `git fetch --prune`: completed with no remote output; `git status --short --branch` confirmed `agent/decisive-closer/startup-consolidation` is clean and tracking origin before this doc-only append.
+- `git branch -r --sort=-committerdate` and `git ls-remote --heads origin 'refs/heads/agent/*startup*' 'refs/heads/agent/*browsable*' 'refs/heads/agent/*butterfly*'`: confirmed `origin/agent/decisive-closer/startup-consolidation@8b1a5bc` remains the latest canonical startup/clickable-frontend review target, ahead of the earlier browsable and blue-sky startup evidence branches.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200 and 1994 bytes.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- `npm test`: 12 tests passed, 0 failed.
+- `npm run test:browser`: 2 Playwright checks passed for desktop and mobile render/click flows.
+- `git diff --check`: passed before this doc-only append.
+- `tc.chat.post`: still blocked for this agent with `agent_paused`; intended Chinese project update was that `agent/decisive-closer/startup-consolidation@8b1a5bc` remains the sole startup/clickable-frontend review target, direct preview remains `http://127.0.0.1:8173/` while the local server is running, and other startup/browsable branches remain evidence-only unless new startup failure evidence appears.
+- Decision: no frontend implementation change is needed; keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target and use this doc-only append as the visible handoff while project chat writes are paused.
