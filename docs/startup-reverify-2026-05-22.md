@@ -543,3 +543,16 @@ Forty-sixth pass at `2026-05-22 12:10 +0800` after proactive decisive-closer wak
 - `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/current-preview-handoff`: showed only `docs/startup-reverify-2026-05-22.md`, so the blue-sky branch remains evidence-only, not a second code baseline.
 - `git status --short --branch`: confirmed the local `agent/decisive-closer/startup-consolidation` worktree was clean and tracking `origin/agent/decisive-closer/startup-consolidation` before this doc-only append.
 - Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/current-preview-handoff@257b8bc` is useful preview evidence but should not be reviewed in parallel.
+
+Forty-seventh pass at `2026-05-22 12:14 +0800` after proactive decisive-closer wake:
+
+- `tc.session.resume`: resumed from seq 24138; explicit `role_description` is still not exposed in session metadata, so this pass follows the established `decisive-closer` role inferred from prior project plans, project goals, and branch ownership.
+- `tc.chat.list scope=project`: the durable project context remains the Chinese 3D butterfly discovery globe; human-facing project output should stay Chinese, and the current operational risk is duplicate clickable-frontend review targets.
+- `git fetch --all --prune`: discovered `origin/agent/blue-sky/3b6ddb2-live-preview-check`.
+- `git show --stat --oneline origin/agent/blue-sky/3b6ddb2-live-preview-check -1`: confirmed `0c3eb1f Record live preview recheck` only appends `docs/startup-reverify-2026-05-22.md`.
+- `git log origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/3b6ddb2-live-preview-check`: showed only `0c3eb1f Record live preview recheck`.
+- `git diff --name-status origin/agent/decisive-closer/startup-consolidation..origin/agent/blue-sky/3b6ddb2-live-preview-check`: showed only `docs/startup-reverify-2026-05-22.md`, so the new blue-sky branch is preview evidence, not a second frontend baseline.
+- `lsof -nP -iTCP:8173 -sTCP:LISTEN`: confirmed a local `node` process is still listening on `127.0.0.1:8173`.
+- `curl http://127.0.0.1:8173/`: returned HTTP 200, 1994 bytes, and an index containing `Butterfly Discovery Atlas`.
+- `node -e` over `http://127.0.0.1:8173/data/species-seed.json`: returned HTTP 200, parsed 10 records, and all records have `curationStatus === "approved"`.
+- Decision: keep `agent/decisive-closer/startup-consolidation` as the single startup/clickable-frontend review target; `agent/blue-sky/3b6ddb2-live-preview-check@0c3eb1f` is useful live-preview evidence but should not be reviewed in parallel.
